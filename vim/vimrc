@@ -1,1 +1,41 @@
-.vimrc
+" Kevqn's vimrc
+
+syntax on
+set relativenumber
+set number
+
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+		
+
+" Insert mode cursor
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[2 q"
+
+" Plugins
+"
+" Manager : Vundle
+"
+
+set nocompatible
+filetype off
+
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
+Plugin 'tomasr/molokai'
+" Plugin 'myusuf3/numbers.vim'
+Plugin 'ap/vim-css-color'
+
+call vundle#end()
+filetype plugin indent on
+
+" Plugin / Theme config after loading
+
+let g:airline_powerline_fonts=1
+colorscheme molokai
