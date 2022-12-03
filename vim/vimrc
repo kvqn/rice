@@ -28,9 +28,13 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
-Plugin 'tomasr/molokai'
 " Plugin 'myusuf3/numbers.vim'
 Plugin 'ap/vim-css-color'
+
+" Color Scheme
+" Plugin 'tomasr/molokai'
+Plugin 'morhetz/gruvbox'
+
 
 call vundle#end()
 filetype plugin indent on
@@ -38,4 +42,6 @@ filetype plugin indent on
 " Plugin / Theme config after loading
 
 let g:airline_powerline_fonts=1
-colorscheme molokai
+
+set background=dark
+colorscheme gruvbox
