@@ -1,47 +1,68 @@
-" Kevqn's vimrc
+" ---------------------------------------------------------------------------
+"                              Kevqn's Vimrc
+" ---------------------------------------------------------------------------
+
 
 syntax on
+
+
+" Ruler shows absolute number for current row and absolute number for other
+" rows
 set relativenumber
 set number
 
+
+" Pressing tab places 4 spaces
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
-		
 
-" Insert mode cursor
+" Turn insert mode cursor into a beam
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
 
-" Plugins
-"
-" Manager : Vundle
-"
+
+" -----------------------------Plugins And Themes-----------------------------
+"  Plugin Manager : Vundle
+
 
 set nocompatible
 filetype off
 
+
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-commentary'
-" Plugin 'myusuf3/numbers.vim'
-Plugin 'ap/vim-css-color'
+    " Plugins
+    " Goto (https://vimawesome.com/) for a list of awesome vim plugins
+   
+    Plugin 'VundleVim/Vundle.vim'
+    Plugin 'tpope/vim-surround'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
+    Plugin 'tpope/vim-repeat'
+    Plugin 'tpope/vim-commentary'
+    Plugin 'ap/vim-css-color'
 
-" Color Scheme
-" Plugin 'tomasr/molokai'
-Plugin 'morhetz/gruvbox'
+    " Color Schemes
+    " Goto (https://vimcolorschemes.com/) for a list of awesome vim
+    " colorschemes
+    
+    Plugin 'tomasr/molokai'
+    Plugin 'morhetz/gruvbox'
 
 
 call vundle#end()
 filetype plugin indent on
 
-" Plugin / Theme config after loading
+" ---------------------Configuration for Plugins & Themes---------------------
 
+
+" Airline Configuration
 let g:airline_powerline_fonts=1
 
+
+" Colorscheme Configuration
 set background=dark
 colorscheme gruvbox
+
+
+" ----------------------------------------------------------------------------
