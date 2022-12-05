@@ -173,7 +173,7 @@ myMouseBindings (XConfig {XMonad.modMask = super}) = M.fromList $
     ]
 
 -- ## Layouts ## -------------------------------------------------------------------------
-myLayout = avoidStruts(tiled ||| Mirror tiled)
+myLayout = avoidStruts $ smartBorders (tiled ||| Mirror tiled)
 	where
 		-- default tiling algorithm partitions the screen into two panes
 		tiled   = Tall nmaster delta ratio
