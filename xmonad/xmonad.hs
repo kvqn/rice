@@ -30,6 +30,8 @@ import qualified Data.Map        as M
 import qualified XMonad.Actions.CycleWS as CWS
 import XMonad.Util.Paste
 
+import qualified XMonad.Util.Hacks as Hacks
+
 -- ## Startup hook ## ---------------------------------------------------------------
 myStartupHook = do
     spawn "bash ~/.xmonad/bin/autostart.sh"
@@ -194,6 +196,7 @@ myManageHook = composeAll . concat $
     , [title =? t --> doCenterFloat | t <- myTFloats]
     , [resource =? r --> doFloat | r <- myRFloats]
     , [resource =? i --> doIgnore | i <- myIgnores]
+    , [checkDock --> doLower]
     ]
     where
         myCFloats = [ "alacritty-float", "MPlayer", "mpv",
@@ -207,7 +210,7 @@ myManageHook = composeAll . concat $
         myIgnores = ["desktop_window"]
 
 -- ## Event handling ## -------------------------------------------------------------------
-myEventHook = ewmhDesktopsEventHook
+myEventHook = Hacks.windowedFullscreenFixEventHook
 
 -- ## Logging ## --------------------------------------------------------------------------
 myLogHook = return ()
