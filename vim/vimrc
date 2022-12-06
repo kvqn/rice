@@ -2,23 +2,47 @@
 "                              Kevqn's Vimrc
 " ---------------------------------------------------------------------------
 
+" Use :help for detailed breakdown of these options.
+" Use :options for a tldr.
 
+
+" Self explainatory
 syntax on
-
+set noerrorbells
+set nowrap
 
 " Ruler shows absolute number for current row and absolute number for other
 " rows
 set relativenumber
 set number
 
-
 " Pressing tab places 4 spaces
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 
+" Smart indendation for good code
+set smartindent
+
+" Search related
+set ignorecase
+set smartcase
+set incsearch
+
+" Scrolling
+set scrolloff=8
+
+" <name this section>
+set cc=120
+set signcolumn=yes
 
 " Turn insert mode cursor into a beam
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
+
+" I don't fully understand what these do
+set hidden
 
 
 " -----------------------------Plugins And Themes-----------------------------
@@ -42,6 +66,7 @@ call vundle#begin()
     Plugin 'tpope/vim-commentary'
     Plugin 'ap/vim-css-color'
     Plugin 'jiangmiao/auto-pairs'
+    Plugin 'airblade/vim-gitgutter'
 
     " Color Schemes
     " Goto (https://vimcolorschemes.com/) for a list of awesome vim
@@ -49,8 +74,6 @@ call vundle#begin()
     
     Plugin 'tomasr/molokai'
     Plugin 'morhetz/gruvbox'
-    
-
 
 call vundle#end()
 filetype plugin indent on
@@ -65,6 +88,17 @@ let g:airline_powerline_fonts=1
 " Colorscheme Configuration
 set background=dark
 colorscheme gruvbox
+
+" ------------------------------Keybind Mapping-------------------------------
+
+
+let mapleader = " "
+
+" Git Gutter (airblade/vim-gitgutter)
+
+" Jump between hunks
+nmap <Leader>gn <Plug>(GitGutterNextHunk)  " git next
+nmap <Leader>gp <Plug>(GitGutterPrevHunk)  " git previous
 
 
 " ----------------------------------------------------------------------------
