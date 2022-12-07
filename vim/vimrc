@@ -67,6 +67,7 @@ call vundle#begin()
     Plugin 'ap/vim-css-color'
     Plugin 'jiangmiao/auto-pairs'
     Plugin 'airblade/vim-gitgutter'
+    Plugin 'ntpeters/vim-better-whitespace'
 
     " Color Schemes
     " Goto (https://vimcolorschemes.com/) for a list of awesome vim
