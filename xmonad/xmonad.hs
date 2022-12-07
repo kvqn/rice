@@ -4,7 +4,7 @@
 -- Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
 -- Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 --
--- Xmonad config for Archcraft 
+-- Xmonad config for Archcraft
 
 -- ## Modules ## -------------------------------------------------------------------
 import XMonad
@@ -78,7 +78,7 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
                     If you are using vim, do `:set cc=120` for a better viewing experience.
                                                                                                                 -}
 
-    
+
     ------------------------------------------Workspace Related Keybinds------------------------------------------
 
     -- ctrl + alt + left/right                          focus on the left or right workspace
@@ -97,7 +97,7 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
     , ((super,                  xK_k),                  windows W.focusUp)
     , ((super,                  xK_Down),               windows W.focusDown)
     , ((super,                  xK_j),                  windows W.focusDown)
-    
+
     -- win + shift + left/right                         shrink/expand window
     , ((super .|. shiftMask,    xK_Left),               sendMessage Shrink)
     , ((super .|. shiftMask,    xK_h),                  sendMessage Shrink)
@@ -105,10 +105,10 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
     , ((super .|. shiftMask,    xK_l),                  sendMessage Expand)
 
     -- super + space                                    switch between vertical and horizontal layout
-    , ((super,                  xK_space), 		sendMessage NextLayout)
+    , ((super,                  xK_space), 		        sendMessage NextLayout)
 
     -- super + shift + return                           push (shift) window into tiled mode
-    , ((super .|. shiftMask,    xK_Return),		withFocused $ windows . W.sink)
+    , ((super .|. shiftMask,    xK_Return),		        withFocused $ windows . W.sink)
 
     -- super + return                                   swap focused window and master window
     , ((super,                  xK_Return),             windows W.swapMaster)
@@ -120,10 +120,10 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
     -- p key (TODO: fix this)
     , ((0, xK_KP_0), pasteString "p" )
     , ((shiftMask, xK_KP_0), pasteString "P")
-    
+
 
     ----------------------------------------Common Window Related Keybinds----------------------------------------
-    
+
     -- super + q                                        close focused window
     , ((super,                  xK_q),                  kill)
 
@@ -132,10 +132,10 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
 
 
     -- super + t                                        launch alacritty in floating mode
-    , ((super, xK_t), 			                spawn "alacritty --class \"alacritty-float\"")
+    , ((super, xK_t), 			                        spawn "alacritty --class \"alacritty-float\"")
 
     -- super                                            rofi launcher
-    , ((mod1Mask,           		xK_F1), 	rofi_launcher)
+    , ((mod1Mask,           		    xK_F1), 	    rofi_launcher)
 
     -- super + shift + s                                rofi screenshot
     , ((super .|. shiftMask,            xK_s),          rofi_screenshot)
@@ -145,14 +145,14 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
 
 
     -- Audio Keys
-    , ((0,         xF86XK_AudioPlay), 			spawn "mpc toggle")
-    , ((0,         xF86XK_AudioPrev), 			spawn "mpc prev")
-    , ((0,         xF86XK_AudioNext), 			spawn "mpc next")
-    , ((0,         xF86XK_AudioStop), 			spawn "mpc stop")
+    , ((0,         xF86XK_AudioPlay), 			        spawn "mpc toggle")
+    , ((0,         xF86XK_AudioPrev), 			        spawn "mpc prev")
+    , ((0,         xF86XK_AudioNext), 			        spawn "mpc next")
+    , ((0,         xF86XK_AudioStop), 			        spawn "mpc stop")
     , ((0,         xF86XK_AudioRaiseVolume), 	        spawn "volume --inc")
     , ((0,         xF86XK_AudioLowerVolume), 	        spawn "volume --dec")
-    , ((0,         xF86XK_AudioMute), 			spawn "volume --toggle")
-    , ((0,         xF86XK_AudioMicMute), 		spawn "volume --toggle-mic")
+    , ((0,         xF86XK_AudioMute), 			        spawn "volume --toggle")
+    , ((0,         xF86XK_AudioMicMute), 		        spawn "volume --toggle-mic")
 
 
     -------------------------------------------------------------------------------------------------------------
@@ -199,11 +199,11 @@ myManageHook = composeAll . concat $
     , [checkDock --> doLower]
     ]
     where
-        myCFloats = [ "alacritty-float", "MPlayer", "mpv",
-            "Gimp", "feh", "Viewnior", "Gpicview",
+        myCFloats = [
+            "alacritty-float", "MPlayer", "mpv", "Gimp", "feh", "Viewnior", "Gpicview",
             "Kvantum Manager", "qt5ct", "VirtualBox Manager", "qemu", "Qemu-system-x86_64",
-            "Lxappearance", "Nitrogen", "Arandr", "Pavucontrol", "Xfce4-power-manager-settings", "Nm-connection-editor",
-            "Spotify", "qBittorrrent", "Thunar", "Blueberry.py"
+            "Lxappearance", "Nitrogen", "Arandr", "Pavucontrol", "Xfce4-power-manager-settings",
+            "Nm-connection-editor", "Spotify", "qBittorrrent", "Thunar", "Blueberry.py"
             ]
         myTFloats = ["Downloads", "Save As...", "About : Aditya Shakya", "Getting Started"]
         myRFloats = []
