@@ -1,11 +1,6 @@
 {-# OPTIONS_GHC -Wno-deprecations -Wno-tabs #-}
 -- this line make the compiler shut up about warnings
 
--- Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
--- Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
---
--- Xmonad config for Archcraft
-
 -- ## Modules ## -------------------------------------------------------------------
 import XMonad
 import XMonad.Util.SpawnOnce
@@ -139,6 +134,9 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
 
     -- super + shift + s                                rofi screenshot
     , ((super .|. shiftMask,            xK_s),          rofi_screenshot)
+
+    -- super + shift + c                                color picker (xcolor)
+    , ((super .|. shiftMask,            xK_c),          spawn "xcolor -s")
 
 
     -------------------------------------------------Miscellaneous-----------------------------------------------
