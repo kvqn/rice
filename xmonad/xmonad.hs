@@ -153,12 +153,12 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
     , ((shiftMask,                          xK_KP_End), 	sendKey shiftMask                           xK_p)
     , ((controlMask,                        xK_KP_End), 	sendKey controlMask                         xK_p)
     , ((mod1Mask,                           xK_KP_End), 	sendKey mod1Mask                            xK_p)
-    , ((shiftMask .|. controlMask),         xK_KP_End), 	sendKey (shiftMask .|. controlMask)         xK_p)
-    , ((shiftMask .|. mod1Mask),            xK_KP_End), 	sendKey (shiftMask .|. mod1Mask)            xK_p)
-    , ((controlMask .|. mod1Mask),          xK_KP_End), 	sendKey (controlMask .|. mod1Mask)          xK_p)
-    , ((super .|. controlMask),             xK_KP_End), 	sendKey (super .|. controlMask)             xK_p)
-    , ((super .|. shiftMask),               xK_KP_End), 	sendKey (super .|. shiftMask)               xK_p)
-    , ((super .|. mod1Mask),                xK_KP_End), 	sendKey (super .|. mod1Mask)                xK_p)
+    , ((shiftMask .|. controlMask,          xK_KP_End), 	sendKey (shiftMask .|. controlMask)         xK_p)
+    , ((shiftMask .|. mod1Mask,             xK_KP_End), 	sendKey (shiftMask .|. mod1Mask)            xK_p)
+    , ((controlMask .|. mod1Mask,           xK_KP_End), 	sendKey (controlMask .|. mod1Mask)          xK_p)
+    , ((super .|. controlMask,              xK_KP_End), 	sendKey (super .|. controlMask)             xK_p)
+    , ((super .|. shiftMask,                xK_KP_End), 	sendKey (super .|. shiftMask)               xK_p)
+    , ((super .|. mod1Mask,                 xK_KP_End), 	sendKey (super .|. mod1Mask)                xK_p)
 
 
     -------------------------------------------------------------------------------------------------------------
