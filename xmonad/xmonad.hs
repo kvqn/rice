@@ -65,6 +65,8 @@ myModMask       		= mod4Mask
 -- Workspaces (ewmh)
 myWorkspaces    		= ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
+altMask = mod1Mask
+
 -- ## Key Bindings ## -------------------------------------------------------------------
 myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
 
@@ -77,12 +79,23 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     ------------------------------------------Workspace Related Keybinds------------------------------------------
 
     -- ctrl + alt + left/right                          focus on the left or right workspace
-      ((controlMask .|. mod1Mask,               xK_l),  CWS.nextWS)
-    , ((controlMask .|. mod1Mask,               xK_h),  CWS.prevWS)
+      ((controlMask .|. altMask,               xK_l),  CWS.nextWS)
+    , ((controlMask .|. altMask,               xK_h),  CWS.prevWS)
 
     -- ctrl + alt + shift + left/right                  send (shift) window to left or right workspace
-    , ((controlMask .|. mod1Mask .|. shiftMask, xK_l),  CWS.shiftToNext >> CWS.nextWS)
-    , ((controlMask .|. mod1Mask .|. shiftMask, xK_h),  CWS.shiftToPrev >> CWS.prevWS)
+    , ((controlMask .|. altMask .|. shiftMask, xK_l),  CWS.shiftToNext >> CWS.nextWS)
+    , ((controlMask .|. altMask .|. shiftMask, xK_h),  CWS.shiftToPrev >> CWS.prevWS)
+
+    -- super + {1-9}                                    focus on workspace 1-9
+    , ((super,                  xK_1),                  CWS.viewNth 0)
+    , ((super,                  xK_2),                  CWS.viewNth 1)
+    , ((super,                  xK_3),                  CWS.viewNth 2)
+    , ((super,                  xK_4),                  CWS.viewNth 3)
+    , ((super,                  xK_5),                  CWS.viewNth 4)
+    , ((super,                  xK_6),                  CWS.viewNth 5)
+    , ((super,                  xK_7),                  CWS.viewNth 6)
+    , ((super,                  xK_8),                  CWS.viewNth 7)
+    , ((super,                  xK_9),                  CWS.viewNth 8)
 
 
     ----------------------------------------Tiling window related keybinds----------------------------------------
@@ -124,11 +137,8 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     -- super + t                                        launch alacritty in floating mode
     , ((super, xK_t), 			                        spawn "alacritty --class \"alacritty-float\"")
 
-    -- super + shift + t                                launch alacritty in tiled mode
-    , ((super .|. shiftMask, xK_t), 			        spawn "alacritty")
-
     -- super                                            rofi launcher
-    , ((mod1Mask,           		    xK_F1), 	    rofi_launcher)
+    , ((altMask,           		        xK_F1), 	    rofi_launcher)
 
     -- super + shift + s                                rofi screenshot
     , ((super .|. shiftMask,            xK_s),          rofi_screenshot)
@@ -155,13 +165,13 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     , ((super,                              xK_KP_End), 	sendKey super                               xK_p)
     , ((shiftMask,                          xK_KP_End), 	sendKey shiftMask                           xK_p)
     , ((controlMask,                        xK_KP_End), 	sendKey controlMask                         xK_p)
-    , ((mod1Mask,                           xK_KP_End), 	sendKey mod1Mask                            xK_p)
+    , ((altMask,                            xK_KP_End), 	sendKey altMask                            xK_p)
     , ((shiftMask .|. controlMask,          xK_KP_End), 	sendKey (shiftMask .|. controlMask)         xK_p)
-    , ((shiftMask .|. mod1Mask,             xK_KP_End), 	sendKey (shiftMask .|. mod1Mask)            xK_p)
-    , ((controlMask .|. mod1Mask,           xK_KP_End), 	sendKey (controlMask .|. mod1Mask)          xK_p)
+    , ((shiftMask .|. altMask,              xK_KP_End), 	sendKey (shiftMask .|. altMask)            xK_p)
+    , ((controlMask .|. altMask,            xK_KP_End), 	sendKey (controlMask .|. altMask)          xK_p)
     , ((super .|. controlMask,              xK_KP_End), 	sendKey (super .|. controlMask)             xK_p)
     , ((super .|. shiftMask,                xK_KP_End), 	sendKey (super .|. shiftMask)               xK_p)
-    , ((super .|. mod1Mask,                 xK_KP_End), 	sendKey (super .|. mod1Mask)                xK_p)
+    , ((super .|. altMask,                  xK_KP_End), 	sendKey (super .|. altMask)                xK_p)
 
 
     -------------------------------------------------------------------------------------------------------------
