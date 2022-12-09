@@ -66,7 +66,7 @@ myModMask       		= mod4Mask
 myWorkspaces    		= ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
 -- ## Key Bindings ## -------------------------------------------------------------------
-myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
+myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
 
     {-
                     Following are the keybinds personally catered to my habbits.
@@ -77,7 +77,7 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
     ------------------------------------------Workspace Related Keybinds------------------------------------------
 
     -- ctrl + alt + left/right                          focus on the left or right workspace
-    [ ((controlMask .|. mod1Mask,               xK_l),  CWS.nextWS)
+      ((controlMask .|. mod1Mask,               xK_l),  CWS.nextWS)
     , ((controlMask .|. mod1Mask,               xK_h),  CWS.prevWS)
 
     -- ctrl + alt + shift + left/right                  send (shift) window to left or right workspace
@@ -123,6 +123,9 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
 
     -- super + t                                        launch alacritty in floating mode
     , ((super, xK_t), 			                        spawn "alacritty --class \"alacritty-float\"")
+
+    -- super + shift + t                                launch alacritty in tiled mode
+    , ((super .|. shiftMask, xK_t), 			        spawn "alacritty")
 
     -- super                                            rofi launcher
     , ((mod1Mask,           		    xK_F1), 	    rofi_launcher)
@@ -196,14 +199,14 @@ myLayout = avoidStruts $ smartBorders (tiled ||| Mirror tiled)
 		delta   = 3/100
 
 -- ## Window rules ## --------------------------------------------------------------------
-myManageHook = composeAll . concat $
-    [ [isDialog --> doCenterFloat]
+myManageHook = composeAll $ ( concat [
+      [isDialog --> doCenterFloat]
     , [className =? c --> doCenterFloat | c <- myCFloats]
     , [title =? t --> doCenterFloat | t <- myTFloats]
     , [resource =? r --> doFloat | r <- myRFloats]
     , [resource =? i --> doIgnore | i <- myIgnores]
     , [checkDock --> doLower]
-    ]
+    ] ++ myShiftHooks )
     where
         myCFloats = [
             "alacritty-float", "MPlayer", "mpv", "Gimp", "feh", "Viewnior", "Gpicview",
@@ -214,6 +217,40 @@ myManageHook = composeAll . concat $
         myTFloats = ["Downloads", "Save As...", "About : Aditya Shakya", "Getting Started"]
         myRFloats = []
         myIgnores = ["desktop_window"]
+
+        myShiftHooks = [
+
+            -- Workspace 1 : Terminal
+             className =? "Alacritty"           --> doShift "1"
+
+            -- Workspace 2 : File Manager
+            , className =? "Thunar"             --> doShift "2"
+
+            -- Workspace 3 : Code
+            , className =? "Code"               --> doShift "3"
+
+            -- Workspace 4 : Browser
+            , className =? "Firefox"            --> doShift "4"
+
+            -- Workspace 5 : Chatting Software
+            , className =? "discord"            --> doShift "5"
+
+            -- Workspace 6 : Music
+            , className =? "Spotify"            --> doShift "6"
+            , className =? "spotify"            --> doShift "6"
+
+            -- Workspace 7 : Notes
+            , className =? "obsidian"           --> doShift "7"
+
+            -- Workspace 8 : Video
+            , className =? "mpv"                --> doShift "8"
+            , className =? "vlc"                --> doShift "8"
+
+            -- Workspace 9 : <Unused>
+
+            -- Workspace 10 : <Unused>
+
+            ]
 
 -- ## Event handling ## -------------------------------------------------------------------
 myEventHook = Hacks.windowedFullscreenFixEventHook
