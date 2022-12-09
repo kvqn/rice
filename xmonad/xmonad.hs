@@ -112,11 +112,6 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
     ---------------------------------------Floating Window Related Keybinds---------------------------------------
     --  TODO :)
 
-    -- p key (TODO: fix this)
-    , ((0, xK_KP_0), pasteString "p" )
-    , ((shiftMask, xK_KP_0), pasteString "P")
-
-
     ----------------------------------------Common Window Related Keybinds----------------------------------------
 
     -- super + q                                        close focused window
@@ -151,6 +146,19 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $
     , ((0,         xF86XK_AudioLowerVolume), 	        spawn "volume --dec")
     , ((0,         xF86XK_AudioMute), 			        spawn "volume --toggle")
     , ((0,         xF86XK_AudioMicMute), 		        spawn "volume --toggle-mic")
+
+    -- Numpad 1 (End) simulates p key
+    , ((0,                                  xK_KP_End), 	sendKey 0                                   xK_p)
+    , ((super,                              xK_KP_End), 	sendKey super                               xK_p)
+    , ((shiftMask,                          xK_KP_End), 	sendKey shiftMask                           xK_p)
+    , ((controlMask,                        xK_KP_End), 	sendKey controlMask                         xK_p)
+    , ((mod1Mask,                           xK_KP_End), 	sendKey mod1Mask                            xK_p)
+    , ((shiftMask .|. controlMask),         xK_KP_End), 	sendKey (shiftMask .|. controlMask)         xK_p)
+    , ((shiftMask .|. mod1Mask),            xK_KP_End), 	sendKey (shiftMask .|. mod1Mask)            xK_p)
+    , ((controlMask .|. mod1Mask),          xK_KP_End), 	sendKey (controlMask .|. mod1Mask)          xK_p)
+    , ((super .|. controlMask),             xK_KP_End), 	sendKey (super .|. controlMask)             xK_p)
+    , ((super .|. shiftMask),               xK_KP_End), 	sendKey (super .|. shiftMask)               xK_p)
+    , ((super .|. mod1Mask),                xK_KP_End), 	sendKey (super .|. mod1Mask)                xK_p)
 
 
     -------------------------------------------------------------------------------------------------------------
