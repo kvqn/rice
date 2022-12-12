@@ -242,6 +242,8 @@ myManageHook = composeAll $ ( concat [
             -- Workspace 4 : Browser
             , className =? "firefox"            --> doShift "4"
             , className =? "Navigator"          --> doShift "4"
+            , className =? "Vivaldi-stable"     --> doShift "4"
+            , className =? "vivaldi-stable"     --> doShift "4"
 
             -- Workspace 5 : Chatting Software
             , className =? "discord"            --> doShift "5"
@@ -291,7 +293,7 @@ defaults = def {
 
       -- hooks, layouts
         manageHook = myManageHook,
-        layoutHook = gaps [(L,0), (R,0), (U,0), (D,0)] $ spacingRaw False (Border 10 0 10 0) True (Border 0 10 0 10) True $ myLayout,
+        layoutHook = gaps [(L,0), (R,0), (U,0), (D,0)] $ spacingRaw True (Border 10 0 10 0) True (Border 0 10 0 10) True $ myLayout,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
         startupHook        = myStartupHook
