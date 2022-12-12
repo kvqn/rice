@@ -43,6 +43,7 @@ let &t_EI = "\e[2 q"
 
 " I don't fully understand what these do
 set hidden
+set noswapfile
 
 
 " -----------------------------Plugins And Themes-----------------------------
@@ -57,7 +58,7 @@ call vundle#begin()
 
     " Plugins
     " Goto (https://vimawesome.com/) for a list of awesome vim plugins
-   
+
     Plugin 'VundleVim/Vundle.vim'
     Plugin 'tpope/vim-surround'
     Plugin 'vim-airline/vim-airline'
@@ -68,13 +69,18 @@ call vundle#begin()
     Plugin 'jiangmiao/auto-pairs'
     Plugin 'airblade/vim-gitgutter'
     Plugin 'ntpeters/vim-better-whitespace'
+    Plugin 'farmergreg/vim-lastplace'
+    Plugin 'neovimhaskell/haskell-vim'
 
     " Color Schemes
     " Goto (https://vimcolorschemes.com/) for a list of awesome vim
     " colorschemes
-    
+
     Plugin 'tomasr/molokai'
     Plugin 'morhetz/gruvbox'
+
+    Plugin 'neoclide/coc.nvim'
+    Plugin 'github/copilot.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -101,5 +107,12 @@ let mapleader = " "
 nmap <Leader>gn <Plug>(GitGutterNextHunk)  " git next
 nmap <Leader>gp <Plug>(GitGutterPrevHunk)  " git previous
 
+" Use tab for trigger completion with characters ahead and navigate.
+inoremap <silent><expr> <TAB>
+            \ coc#pum#visible() ? coc#pum#next(1) :
+            \ CheckBackspace() ? "\<Tab>" :
+            \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1)
+    : "\<C-h>"
 
 " ----------------------------------------------------------------------------
