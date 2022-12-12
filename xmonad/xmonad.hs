@@ -29,7 +29,7 @@ import qualified XMonad.Util.Hacks as Hacks
 
 -- ## Startup hook ## ---------------------------------------------------------------
 myStartupHook = do
-    spawn "bash ~/.xmonad/bin/autostart.sh"
+    spawn "bash ~/projects/rice/startup.sh"
 
 -- ## Applications ## ---------------------------------------------------------------
 
@@ -87,15 +87,15 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     , ((controlMask .|. altMask .|. shiftMask, xK_h),  CWS.shiftToPrev >> CWS.prevWS)
 
     -- super + {1-9}                                    focus on workspace 1-9
-    , ((super,                  xK_1),                  CWS.viewNth 0)
-    , ((super,                  xK_2),                  CWS.viewNth 1)
-    , ((super,                  xK_3),                  CWS.viewNth 2)
-    , ((super,                  xK_4),                  CWS.viewNth 3)
-    , ((super,                  xK_5),                  CWS.viewNth 4)
-    , ((super,                  xK_6),                  CWS.viewNth 5)
-    , ((super,                  xK_7),                  CWS.viewNth 6)
-    , ((super,                  xK_8),                  CWS.viewNth 7)
-    , ((super,                  xK_9),                  CWS.viewNth 8)
+    , ((super,                  xK_1),                  windows $ W.greedyView "1")
+    , ((super,                  xK_2),                  windows $ W.greedyView "2")
+    , ((super,                  xK_3),                  windows $ W.greedyView "3")
+    , ((super,                  xK_4),                  windows $ W.greedyView "4")
+    , ((super,                  xK_5),                  windows $ W.greedyView "5")
+    , ((super,                  xK_6),                  windows $ W.greedyView "6")
+    , ((super,                  xK_7),                  windows $ W.greedyView "7")
+    , ((super,                  xK_8),                  windows $ W.greedyView "8")
+    , ((super,                  xK_9),                  windows $ W.greedyView "9")
 
 
     ----------------------------------------Tiling window related keybinds----------------------------------------
@@ -240,7 +240,8 @@ myManageHook = composeAll $ ( concat [
             , className =? "Code"               --> doShift "3"
 
             -- Workspace 4 : Browser
-            , className =? "Firefox"            --> doShift "4"
+            , className =? "firefox"            --> doShift "4"
+            , className =? "Navigator"          --> doShift "4"
 
             -- Workspace 5 : Chatting Software
             , className =? "discord"            --> doShift "5"
