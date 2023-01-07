@@ -6,3 +6,7 @@
  alias sudo="sudo --preserve-env"
 
  alias todo="vim /home/kevqn/projects/todo"
+ alias tree="tree -I __pycache__"
+ alias py='python'
+
+ alias vim="nvim"
