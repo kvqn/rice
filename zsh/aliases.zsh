@@ -9,4 +9,6 @@
  alias tree="tree -I __pycache__"
  alias py='python'
 
+ alias v="vim"
+
  alias vim="nvim"
