@@ -1,4 +1,5 @@
 -- This module contains plugins
+-- vim: set cc=80:
 
 
 return require('packer').startup(function(use)
@@ -42,6 +43,8 @@ return require('packer').startup(function(use)
 
     use 'nvim-lua/plenary.nvim'
     use 'ThePrimeagen/harpoon'
+    use 'vim-airline/vim-airline'
+    use 'vim-airline/vim-airline-themes'
 
     use 'mbbill/undotree'
     use 'tpope/vim-fugitive'
@@ -51,9 +54,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-commentary'
     use 'ntpeters/vim-better-whitespace'
     use 'farmergreg/vim-lastplace'
-
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
+    use 'airblade/vim-gitgutter'
 
     use {
         'nvim-tree/nvim-tree.lua',
@@ -66,8 +67,6 @@ return require('packer').startup(function(use)
     use 'NvChad/nvim-colorizer.lua'
 
     use 'zbirenbaum/copilot.lua'
-
-
 
     ------------------------------Color Schemes------------------------------
     -- Set colorscheme in after/plugins/colors.lua
