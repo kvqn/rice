@@ -144,6 +144,16 @@ _G.packer_plugins = {
     path = "/home/kevqn/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  molokai = {
+    loaded = true,
+    path = "/home/kevqn/.local/share/nvim/site/pack/packer/start/molokai",
+    url = "https://github.com/tomasr/molokai"
+  },
+  neovim = {
+    loaded = true,
+    path = "/home/kevqn/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/rose-pine/neovim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/kevqn/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -223,6 +233,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kevqn/.local/share/nvim/site/pack/packer/start/vim-lastplace",
     url = "https://github.com/farmergreg/vim-lastplace"
+  },
+  ["vim-moonfly-colors"] = {
+    loaded = true,
+    path = "/home/kevqn/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
+    url = "https://github.com/bluz71/vim-moonfly-colors"
   },
   ["vim-repeat"] = {
     loaded = true,

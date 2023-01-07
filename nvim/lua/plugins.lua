@@ -69,8 +69,15 @@ return require('packer').startup(function(use)
 
 
 
-    -- Color Schemes
-    -- Set colorscheme in .config/nvim/after/init.lua
+    ------------------------------Color Schemes------------------------------
+    -- Set colorscheme in after/plugins/colors.lua
+
+    -- Favorites
     use 'morhetz/gruvbox'
+    use 'tomasr/molokai'
+
+    -- I think these are cool but I rarely use them
+    use 'bluz71/vim-moonfly-colors'
+    use 'rose-pine/neovim'
 
 end)
