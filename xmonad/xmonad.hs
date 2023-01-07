@@ -34,7 +34,7 @@ myStartupHook = do
 -- ## Applications ## ---------------------------------------------------------------
 
 -- Terminal
-myTerminal		= "alacritty"
+myTerminal		= "kitty"
 
 -- Rofi Menus
 rofi_launcher 		= spawn "~/.xmonad/rofi/bin/launcher"
@@ -135,7 +135,7 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
 
 
     -- super + t                                        launch alacritty in floating mode
-    , ((super, xK_t), 			                        spawn "alacritty --class \"alacritty-float\"")
+    , ((super, xK_t), 			                        spawn "kitty --class \"kitty-float\"")
 
     -- super                                            rofi launcher
     , ((altMask,           		        xK_F1), 	    rofi_launcher)
@@ -145,6 +145,9 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
 
     -- super + shift + c                                color picker (xcolor)
     , ((super .|. shiftMask,            xK_c),          spawn "xcolor -s")
+
+    -- xmouseless
+    , ((super,                          xK_Escape),     spawn "xmouseless")
 
 
     -------------------------------------------------Miscellaneous-----------------------------------------------
@@ -182,15 +185,13 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
 myMouseBindings (XConfig {XMonad.modMask = super}) = M.fromList $
 
     -- mod-button1, Set the window to floating mode and move by dragging
-    [ ((super, button1), (\w -> focus w >> mouseMoveWindow w
-                                       >> windows W.shiftMaster))
+    [ ((super, button1), (\w -> focus w >> mouseMoveWindow w >> windows W.shiftMaster))
 
     -- mod-button2, Raise the window to the top of the stack
     , ((super, button2), (\w -> focus w >> windows W.shiftMaster))
 
     -- mod-button3, Set the window to floating mode and resize by dragging
-    , ((super, button3), (\w -> focus w >> mouseResizeWindow w
-                                       >> windows W.shiftMaster))
+    , ((super, button3), (\w -> focus w >> mouseResizeWindow w >> windows W.shiftMaster))
     ]
 
 -- ## Layouts ## -------------------------------------------------------------------------
@@ -222,9 +223,11 @@ myManageHook = composeAll $ ( concat [
             "alacritty-float", "MPlayer", "mpv", "Gimp", "feh", "Viewnior", "Gpicview",
             "Kvantum Manager", "qt5ct", "VirtualBox Manager", "qemu", "Qemu-system-x86_64",
             "Lxappearance", "Nitrogen", "Arandr", "Pavucontrol", "Xfce4-power-manager-settings",
-            "Nm-connection-editor", "Spotify", "qBittorrrent", "Thunar", "Blueberry.py"
+            "Nm-connection-editor", "spotify", "Spotify", "qBittorrent", "Thunar", "Blueberry.py",
+            "marktext", "kitty-float", "DesktopEditors", "qbittorrent", "rpi-imager", "Imager",
+            "Steam"
             ]
-        myTFloats = ["Downloads", "Save As...", "About : Aditya Shakya", "Getting Started"]
+        myTFloats = ["Downloads", "Save As...", "About : Aditya Shakya", "Getting Started", "Spotify"]
         myRFloats = []
         myIgnores = ["desktop_window"]
 
@@ -232,6 +235,7 @@ myManageHook = composeAll $ ( concat [
 
             -- Workspace 1 : Terminal
              className =? "Alacritty"           --> doShift "1"
+            ,className =? "kitty"               --> doShift "1"
 
             -- Workspace 2 : File Manager
             , className =? "Thunar"             --> doShift "2"
@@ -251,6 +255,7 @@ myManageHook = composeAll $ ( concat [
             -- Workspace 6 : Music
             , className =? "Spotify"            --> doShift "6"
             , className =? "spotify"            --> doShift "6"
+            , title     =? "Spotify"            --> doShift "6"
 
             -- Workspace 7 : Notes
             , className =? "obsidian"           --> doShift "7"
