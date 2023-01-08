@@ -267,6 +267,8 @@ myManageHook = composeAll $ ( concat [
             -- Workspace 9 : <Unused>
 
             -- Workspace 10 : <Unused>
+            , className =? "qbittorrent"        --> doShift "10"
+            , className =? "qBittorrent"        --> doShift "10"
 
             ]
 
