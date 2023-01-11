@@ -12,3 +12,4 @@
  alias v="vim"
 
  alias vim="nvim"
+ alias tmux="tmux -u"
