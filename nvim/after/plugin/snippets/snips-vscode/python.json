@@ -7,5 +7,12 @@
             "from selenium.webdriver.support.wait import WebDriverWait",
             "from selenium.webdriver.support import expected_conditions as EC"
         ]
+    },
+
+    "logging format" : {
+        "prefix" : "loggingformat",
+        "body" : [
+            "logging.basicConfig(format='[ %(asctime)s - %(levelname)s - %(name)s ] %(message)s', force=True)"
+        ]
     }
 }
