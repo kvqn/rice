@@ -26,6 +26,6 @@ set.cc = {120}
 -- set.signcolumn = true
 
 set.hidden = true
-set.swapfile = true
+set.swapfile = false
 
 vim.cmd("set clipboard+=unnamedplus")

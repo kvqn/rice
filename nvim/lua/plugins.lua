@@ -28,7 +28,7 @@ return require('packer').startup(function(use)
             -- Snippets
             {'L3MON4D3/LuaSnip'},
             -- Snippet Collection (Optional)
-            {'rafamadriz/friendly-snippets'},
+            -- {'rafamadriz/friendly-snippets'},
         }
     }
 
@@ -65,8 +65,8 @@ return require('packer').startup(function(use)
     }
 
     use 'NvChad/nvim-colorizer.lua'
-
     use 'zbirenbaum/copilot.lua'
+    -- use 'norcalli/snippets.nvim'
 
     ------------------------------Color Schemes------------------------------
     -- Set colorscheme in after/plugins/colors.lua
