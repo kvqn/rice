@@ -59,6 +59,13 @@ return require('packer').startup(function(use)
     use 'NvChad/nvim-colorizer.lua'
     use 'zbirenbaum/copilot.lua'
     -- use 'norcalli/snippets.nvim'
+    use {
+        "danymat/neogen",
+        config = function()
+            require('neogen').setup {}
+        end,
+        requires = "nvim-treesitter/nvim-treesitter",
+    }
 
     ------------------------------Color Schemes------------------------------
     -- Set colorscheme in after/plugins/colors.lua
