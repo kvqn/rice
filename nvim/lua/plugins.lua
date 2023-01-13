@@ -67,6 +67,8 @@ return require('packer').startup(function(use)
         requires = "nvim-treesitter/nvim-treesitter",
     }
 
+    use 'ThePrimeagen/vim-be-good'
+
     ------------------------------Color Schemes------------------------------
     -- Set colorscheme in after/plugins/colors.lua
 
