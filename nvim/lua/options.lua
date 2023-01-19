@@ -30,3 +30,4 @@ set.swapfile = false
 
 vim.cmd("set clipboard+=unnamedplus")
 set.hlsearch = true
+set.foldenable = false

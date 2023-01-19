@@ -48,7 +48,7 @@ return require('packer').startup(function(use)
 
     use 'mbbill/undotree'
     use 'tpope/vim-fugitive'
-    use 'jiangmiao/auto-pairs'
+    use 'windwp/nvim-autopairs'
     use 'tpope/vim-surround'
     use 'tpope/vim-repeat'
     use 'tpope/vim-commentary'
@@ -68,6 +68,8 @@ return require('packer').startup(function(use)
     }
 
     use 'ThePrimeagen/vim-be-good'
+    use 'tmhedberg/SimpylFold'
+    -- use 'Konfekt/FastFold'
 
     ------------------------------Color Schemes------------------------------
     -- Set colorscheme in after/plugins/colors.lua
