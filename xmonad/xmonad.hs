@@ -100,12 +100,6 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
 
     ----------------------------------------Tiling window related keybinds----------------------------------------
 
-    -- win + up/down                                    move focus to left/right/up/down window
-    , ((super,                  xK_Up),                 windows W.focusUp)
-    , ((super,                  xK_k),                  windows W.focusUp)
-    , ((super,                  xK_Down),               windows W.focusDown)
-    , ((super,                  xK_j),                  windows W.focusDown)
-
     -- win + shift + left/right                         shrink/expand window
     , ((super .|. shiftMask,    xK_Left),               sendMessage Shrink)
     , ((super .|. shiftMask,    xK_h),                  sendMessage Shrink)
@@ -118,9 +112,6 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     -- super + shift + return                           push (shift) window into tiled mode
     , ((super .|. shiftMask,    xK_Return),		        withFocused $ windows . W.sink)
 
-    -- super + return                                   swap focused window and master window
-    , ((super,                  xK_Return),             windows W.swapMaster)
-
 
     ---------------------------------------Floating Window Related Keybinds---------------------------------------
     --  TODO :)
@@ -130,6 +121,14 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     -- super + q                                        close focused window
     , ((super,                  xK_q),                  kill)
 
+    -- win + up/down                                    move focus to left/right/up/down window
+    , ((super,                  xK_Up),                 windows W.focusUp)
+    , ((super,                  xK_k),                  windows W.focusUp)
+    , ((super,                  xK_Down),               windows W.focusDown)
+    , ((super,                  xK_j),                  windows W.focusDown)
+
+    -- super + return                                   swap focused window and master window
+    , ((super,                  xK_Return),             windows W.swapMaster)
 
     --------------------------------------------Launching Applications--------------------------------------------
 
@@ -182,16 +181,17 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     ]
 
 -- ## Mouse Bindings ## ------------------------------------------------------------------
-myMouseBindings (XConfig {XMonad.modMask = super}) = M.fromList $
+myMouseBindings (XConfig {XMonad.modMask = super}) = M.fromList $ [
 
     -- mod-button1, Set the window to floating mode and move by dragging
-    [ ((super, button1), (\w -> focus w >> mouseMoveWindow w >> windows W.shiftMaster))
+      ((super, button1), (\w -> focus w >> mouseMoveWindow w >> windows W.shiftMaster))
 
     -- mod-button2, Raise the window to the top of the stack
     , ((super, button2), (\w -> focus w >> windows W.shiftMaster))
 
     -- mod-button3, Set the window to floating mode and resize by dragging
     , ((super, button3), (\w -> focus w >> mouseResizeWindow w >> windows W.shiftMaster))
+
     ]
 
 -- ## Layouts ## -------------------------------------------------------------------------
@@ -217,17 +217,17 @@ myManageHook = composeAll $ ( concat [
     , [resource =? r --> doFloat | r <- myRFloats]
     , [resource =? i --> doIgnore | i <- myIgnores]
     , [checkDock --> doLower]
-    ] ++ myShiftHooks )
+    ] ++ myShiftHooks ++ mySpecialHooks )
     where
         myCFloats = [
             "alacritty-float", "MPlayer", "mpv", "Gimp", "feh", "Viewnior", "Gpicview",
             "Kvantum Manager", "qt5ct", "VirtualBox Manager", "qemu", "Qemu-system-x86_64",
             "Lxappearance", "Nitrogen", "Arandr", "Pavucontrol", "Xfce4-power-manager-settings",
             "Nm-connection-editor", "spotify", "Spotify", "qBittorrent", "Thunar", "Blueberry.py",
-            "marktext", "kitty-float", "DesktopEditors", "qbittorrent", "rpi-imager", "Imager",
+            "marktext", "DesktopEditors", "qbittorrent", "rpi-imager", "Imager",
             "Steam"
             ]
-        myTFloats = ["Downloads", "Save As...", "About : Aditya Shakya", "Getting Started", "Spotify"]
+        myTFloats = ["Downloads", "Save As...", "Spotify"]
         myRFloats = []
         myIgnores = ["desktop_window"]
 
@@ -266,10 +266,14 @@ myManageHook = composeAll $ ( concat [
 
             -- Workspace 9 : <Unused>
 
-            -- Workspace 10 : <Unused>
+            -- Workspace 10 : Torrents
             , className =? "qbittorrent"        --> doShift "10"
             , className =? "qBittorrent"        --> doShift "10"
 
+            ]
+
+        mySpecialHooks = [
+              className =? "kitty-float" --> doRectFloat( W.RationalRect 0.1 0.1 0.6 0.6 )
             ]
 
 -- ## Event handling ## -------------------------------------------------------------------
