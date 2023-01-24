@@ -80,6 +80,8 @@ return require('packer').startup(function(use)
         ft = { "markdown" },
     })
 
+    use 'ianding1/leetcode.vim'
+
 
     ------------------------------Color Schemes------------------------------
     -- Set colorscheme in after/plugins/colors.lua
