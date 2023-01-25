@@ -40,6 +40,7 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use 'sharkdp/fd'
 
     use 'nvim-lua/plenary.nvim'
     use 'ThePrimeagen/harpoon'
@@ -82,6 +83,7 @@ return require('packer').startup(function(use)
 
     use 'ianding1/leetcode.vim'
 
+    use 'windwp/nvim-ts-autotag'
 
     ------------------------------Color Schemes------------------------------
     -- Set colorscheme in after/plugins/colors.lua
