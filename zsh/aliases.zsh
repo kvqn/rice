@@ -14,3 +14,7 @@
  alias vim="nvim"
  alias tmux="tmux -u"
  alias gs="git status"
+
+
+ # Programs
+ alias cgpa="python /home/kevqn/projects/cgpa-analysis/cgpa"

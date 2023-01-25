@@ -85,6 +85,8 @@ return require('packer').startup(function(use)
 
     use 'windwp/nvim-ts-autotag'
 
+    use 'rhysd/vim-grammarous'
+
     ------------------------------Color Schemes------------------------------
     -- Set colorscheme in after/plugins/colors.lua
 
