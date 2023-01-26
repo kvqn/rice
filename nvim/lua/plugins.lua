@@ -58,7 +58,14 @@ return require('packer').startup(function(use)
     use 'airblade/vim-gitgutter'
 
     use 'NvChad/nvim-colorizer.lua'
-    use 'zbirenbaum/copilot.lua'
+    use {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        config = function()
+            require("copilot").setup(require("copilot_options"))
+        end,
+    }
     -- use 'norcalli/snippets.nvim'
     use {
         "danymat/neogen",
@@ -86,6 +93,8 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-ts-autotag'
 
     use 'rhysd/vim-grammarous'
+
+    use 'lewis6991/impatient.nvim'
 
     ------------------------------Color Schemes------------------------------
     -- Set colorscheme in after/plugins/colors.lua
