@@ -259,6 +259,8 @@ myManageHook = composeAll $ ( concat [
 
             -- Workspace 7 : Notes
             , className =? "obsidian"           --> doShift "7"
+            , className =? "mongodb compass"    --> doShift "7"
+            , className =? "MongoDB Compass"    --> doShift "7"
 
             -- Workspace 8 : Video
             , className =? "mpv"                --> doShift "8"
