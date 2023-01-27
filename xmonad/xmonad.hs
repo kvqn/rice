@@ -81,6 +81,9 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     -- ctrl + alt + left/right                          focus on the left or right workspace
       ((controlMask .|. altMask,               xK_l),  CWS.nextWS)
     , ((controlMask .|. altMask,               xK_h),  CWS.prevWS)
+    , ((controlMask .|. altMask,               xK_Right),  CWS.nextWS)
+    , ((controlMask .|. altMask,               xK_Left),  CWS.prevWS)
+
 
     -- ctrl + alt + shift + left/right                  send (shift) window to left or right workspace
     , ((controlMask .|. altMask .|. shiftMask, xK_l),  CWS.shiftToNext >> CWS.nextWS)
@@ -225,7 +228,7 @@ myManageHook = composeAll $ ( concat [
             "Lxappearance", "Nitrogen", "Arandr", "Pavucontrol", "Xfce4-power-manager-settings",
             "Nm-connection-editor", "spotify", "Spotify", "qBittorrent", "Thunar", "Blueberry.py",
             "marktext", "DesktopEditors", "qbittorrent", "rpi-imager", "Imager",
-            "Steam"
+            "Steam", "onboard", "Onboard"
             ]
         myTFloats = ["Downloads", "Save As...", "Spotify"]
         myRFloats = []

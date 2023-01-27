@@ -106,5 +106,7 @@ return require('packer').startup(function(use)
     -- I think these are cool but I rarely use them
     use 'bluz71/vim-moonfly-colors'
     use 'rose-pine/neovim'
+    use 'rebelot/kanagawa.nvim'
+    use 'NLKNguyen/papercolor-theme'
 
 end)
