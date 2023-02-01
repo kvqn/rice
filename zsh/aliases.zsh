@@ -13,7 +13,7 @@
 
  alias vim="nvim"
  alias tmux="tmux -u"
- alias gs="git status"
+ alias gs="git status --short"
 
 
  # Programs
