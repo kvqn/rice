@@ -18,3 +18,4 @@
 
  # Programs
  alias cgpa="python /home/kevqn/projects/cgpa-analysis/cgpa"
+ alias vim-plugins-profile="python /home/kevqn/projects/bin/vim-plugins-profile/vim-plugins-profile.py /usr/bin/nvim"

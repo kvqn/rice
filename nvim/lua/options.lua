@@ -31,3 +31,7 @@ set.swapfile = false
 vim.cmd("set clipboard+=unnamedplus")
 set.hlsearch = false
 set.foldenable = false
+
+set.cursorline = true
+set.background = "dark"
+set.encoding = "utf-8"

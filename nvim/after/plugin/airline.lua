@@ -1,3 +1,5 @@
 -- print("Hello from airline")
 
-vim.g.airline_powerline_fonts = true
+vim.cmd([[
+let g:airline_powerline_fonts = 1
+]])

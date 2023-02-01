@@ -178,6 +178,17 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     , ((super .|. shiftMask,                xK_KP_End), 	sendKey (super .|. shiftMask)               xK_p)
     , ((super .|. altMask,                  xK_KP_End), 	sendKey (super .|. altMask)                xK_p)
 
+    , ((0,                                  xK_KP_Next), 	sendKey 0                                   xK_l)
+    , ((super,                              xK_KP_Next), 	sendKey super                               xK_l)
+    , ((shiftMask,                          xK_KP_Next), 	sendKey shiftMask                           xK_l)
+    , ((controlMask,                        xK_KP_Next), 	sendKey controlMask                         xK_l)
+    , ((altMask,                            xK_KP_Next), 	sendKey altMask                            xK_l)
+    , ((shiftMask .|. controlMask,          xK_KP_Next), 	sendKey (shiftMask .|. controlMask)         xK_l)
+    , ((shiftMask .|. altMask,              xK_KP_Next), 	sendKey (shiftMask .|. altMask)            xK_l)
+    , ((controlMask .|. altMask,            xK_KP_Next), 	sendKey (controlMask .|. altMask)          xK_l)
+    , ((super .|. controlMask,              xK_KP_Next), 	sendKey (super .|. controlMask)             xK_l)
+    , ((super .|. shiftMask,                xK_KP_Next), 	sendKey (super .|. shiftMask)               xK_l)
+    , ((super .|. altMask,                  xK_KP_Next), 	sendKey (super .|. altMask)                xK_l)
 
     -------------------------------------------------------------------------------------------------------------
 

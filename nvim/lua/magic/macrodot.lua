@@ -1,7 +1,7 @@
 -- This script allows you to repeat a just recorded macro with the . key
 -- Extremely useful and very niche cases.
 
-vim.api.nvim_command( [[
+vim.cmd( [[
 
 fun! QRepeat(_)
     call feedkeys('@'.s:qreg)

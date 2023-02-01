@@ -96,6 +96,13 @@ return require('packer').startup(function(use)
 
     use 'lewis6991/impatient.nvim'
 
+    -------These plugins are for NERDtree-------
+    use 'preservim/nerdtree'
+    use 'ryanoasis/vim-devicons'
+    use 'Xuyuanp/nerdtree-git-plugin'
+    -- use 'scrooloose/nerdtree-project-plugin'
+    --------------------------------------------
+
     ------------------------------Color Schemes------------------------------
     -- Set colorscheme in after/plugins/colors.lua
 
