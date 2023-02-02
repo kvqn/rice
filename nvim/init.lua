@@ -3,6 +3,7 @@ require("plugins")
 require("remaps")
 require("magic")
 require("commands")
+require('colors')
 
 -- print("hi from init.lua")
 

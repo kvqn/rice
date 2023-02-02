@@ -32,7 +32,7 @@ return require('packer').startup(function(use)
         }
     }
 
-    --------------------------------------------------------------------------
+    -------------------------------Core Plugins-------------------------------
 
     use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
 
@@ -42,8 +42,39 @@ return require('packer').startup(function(use)
     }
     use 'sharkdp/fd'
 
+    use {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        config = function()
+            require("copilot").setup(require("copilot_options"))
+        end,
+    }
+    use {
+        "danymat/neogen",
+        config = function()
+            require('neogen').setup {}
+        end,
+        requires = "nvim-treesitter/nvim-treesitter",
+    }
+
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+        ft = { "markdown" },
+    })
+
+    -------These plugins are for NERDtree-------
+    use 'preservim/nerdtree'
+    use 'ryanoasis/vim-devicons'
+    use 'Xuyuanp/nerdtree-git-plugin'
+    -- use 'scrooloose/nerdtree-project-plugin'
+    --------------------------------------------
+
     use 'nvim-lua/plenary.nvim'
     use 'ThePrimeagen/harpoon'
+
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
 
@@ -55,60 +86,28 @@ return require('packer').startup(function(use)
     use 'tpope/vim-commentary'
     use 'ntpeters/vim-better-whitespace'
     use 'farmergreg/vim-lastplace'
-    use 'airblade/vim-gitgutter'
-
     use 'NvChad/nvim-colorizer.lua'
-    use {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        event = "InsertEnter",
-        config = function()
-            require("copilot").setup(require("copilot_options"))
-        end,
-    }
-    -- use 'norcalli/snippets.nvim'
-    use {
-        "danymat/neogen",
-        config = function()
-            require('neogen').setup {}
-        end,
-        requires = "nvim-treesitter/nvim-treesitter",
-    }
-
-    use 'ThePrimeagen/vim-be-good'
-    use 'tmhedberg/SimpylFold'
-    -- use 'Konfekt/FastFold'
-
-    use 'sbdchd/neoformat'
-
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = "cd app && npm install",
-        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-        ft = { "markdown" },
-    })
-
-    use 'ianding1/leetcode.vim'
-
-    use 'windwp/nvim-ts-autotag'
-
-    use 'rhysd/vim-grammarous'
-
     use 'lewis6991/impatient.nvim'
 
-    -------These plugins are for NERDtree-------
-    use 'preservim/nerdtree'
-    use 'ryanoasis/vim-devicons'
-    use 'Xuyuanp/nerdtree-git-plugin'
-    -- use 'scrooloose/nerdtree-project-plugin'
-    --------------------------------------------
+    use 'sbdchd/neoformat'
+    use 'tmhedberg/SimpylFold'
+    use 'windwp/nvim-ts-autotag'
+
+    -- Rarely used plugins
+    use 'airblade/vim-gitgutter'
+    use 'ThePrimeagen/vim-be-good'
+    use 'rhysd/vim-grammarous'
+    use 'ianding1/leetcode.vim'
+    -- use 'norcalli/snippets.nvim'
+
 
     ------------------------------Color Schemes------------------------------
-    -- Set colorscheme in after/plugins/colors.lua
+    -- Set colorscheme in lua/colors/init.lua
 
     -- Favorites
     use 'morhetz/gruvbox'
     use 'tomasr/molokai'
+    use 'nanotech/jellybeans.vim'
 
     -- I think these are cool but I rarely use them
     use 'bluz71/vim-moonfly-colors'
