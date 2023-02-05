@@ -74,10 +74,8 @@ return require('packer').startup(function(use)
 
     use 'nvim-lua/plenary.nvim'
     use 'ThePrimeagen/harpoon'
-
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
-
     use 'mbbill/undotree'
     use 'tpope/vim-fugitive'
     use 'windwp/nvim-autopairs'
@@ -88,10 +86,17 @@ return require('packer').startup(function(use)
     use 'farmergreg/vim-lastplace'
     use 'NvChad/nvim-colorizer.lua'
     use 'lewis6991/impatient.nvim'
-
     use 'sbdchd/neoformat'
     use 'tmhedberg/SimpylFold'
     use 'windwp/nvim-ts-autotag'
+    use 'mustache/vim-mustache-handlebars'
+
+    use {
+        'goolord/alpha-nvim',
+        config = function()
+            require('vagabond-greeter')()
+        end
+    }
 
     -- Rarely used plugins
     use 'airblade/vim-gitgutter'
