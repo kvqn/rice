@@ -98,6 +98,9 @@ return require('packer').startup(function(use)
         end
     }
 
+    use 'NLKNguyen/pipe.vim'
+    use 'NLKNguyen/pipe-mysql.vim'
+
     -- Rarely used plugins
     use 'airblade/vim-gitgutter'
     use 'ThePrimeagen/vim-be-good'
