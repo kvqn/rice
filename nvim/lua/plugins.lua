@@ -101,6 +101,8 @@ return require('packer').startup(function(use)
     use 'NLKNguyen/pipe.vim'
     use 'NLKNguyen/pipe-mysql.vim'
 
+    use 'ggandor/leap.nvim'
+
     -- Rarely used plugins
     use 'airblade/vim-gitgutter'
     use 'ThePrimeagen/vim-be-good'

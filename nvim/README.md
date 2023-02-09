@@ -43,6 +43,8 @@
 | harpoon | `<M-5>` | Switch to mark 5 | 
 | telescope | `<leader>pf` | Find a file in the project |
 | telescope | `<leader>pg` | ( live_grep ) find files that contain a pattern |
+| leap | `<leader>l` | Leap forward |
+| leap | `<leader>L` | Leap backward |
 
 # Commands
 
