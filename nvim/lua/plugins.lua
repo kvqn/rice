@@ -103,6 +103,9 @@ return require('packer').startup(function(use)
 
     use 'ggandor/leap.nvim'
 
+    use 'fladson/vim-kitty'
+
+
     -- Rarely used plugins
     use 'airblade/vim-gitgutter'
     use 'ThePrimeagen/vim-be-good'
