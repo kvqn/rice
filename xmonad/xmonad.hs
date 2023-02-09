@@ -88,6 +88,8 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     -- ctrl + alt + shift + left/right                  send (shift) window to left or right workspace
     , ((controlMask .|. altMask .|. shiftMask, xK_l),  CWS.shiftToNext >> CWS.nextWS)
     , ((controlMask .|. altMask .|. shiftMask, xK_h),  CWS.shiftToPrev >> CWS.prevWS)
+    , ((controlMask .|. altMask .|. shiftMask, xK_Right),  CWS.shiftToNext >> CWS.nextWS)
+    , ((controlMask .|. altMask .|. shiftMask, xK_Left),  CWS.shiftToPrev >> CWS.prevWS)
 
     -- super + {1-9}                                    focus on workspace 1-9
     , ((super,                  xK_1),                  windows $ W.greedyView "1")
