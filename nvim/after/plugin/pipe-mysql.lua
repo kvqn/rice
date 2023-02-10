@@ -10,4 +10,8 @@ let g:pipemysql_login_info = [
  \    'mysql_database' : 'company'
  \ },
 \ ]
+
+unmap __
+unmap _\|
+
 ]])
