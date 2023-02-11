@@ -32,7 +32,19 @@ return require('packer').startup(function(use)
         }
     }
 
-    -------------------------------Core Plugins-------------------------------
+    --------------------------------------------------------------------------
+
+    -------These plugins are for NERDtree-------
+    use 'preservim/nerdtree'
+    use 'ryanoasis/vim-devicons'
+    use 'Xuyuanp/nerdtree-git-plugin'
+    -- use 'scrooloose/nerdtree-project-plugin'
+    --------------------------------------------
+
+    use {
+        'goolord/alpha-nvim',
+        config = function() require('vagabond-greeter')() end
+    }
 
     use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
 
@@ -50,11 +62,10 @@ return require('packer').startup(function(use)
             require("copilot").setup(require("copilot_options"))
         end,
     }
+
     use {
         "danymat/neogen",
-        config = function()
-            require('neogen').setup {}
-        end,
+        config = function() require('neogen').setup {} end,
         requires = "nvim-treesitter/nvim-treesitter",
     }
 
@@ -65,52 +76,37 @@ return require('packer').startup(function(use)
         ft = { "markdown" },
     })
 
-    -------These plugins are for NERDtree-------
-    use 'preservim/nerdtree'
-    use 'ryanoasis/vim-devicons'
-    use 'Xuyuanp/nerdtree-git-plugin'
-    -- use 'scrooloose/nerdtree-project-plugin'
-    --------------------------------------------
-
+    use 'farmergreg/vim-lastplace'
+    use 'fladson/vim-kitty'
+    use 'ggandor/leap.nvim'
+    use 'lewis6991/impatient.nvim'
+    use 'mbbill/undotree'
+    use 'mustache/vim-mustache-handlebars'
+    use 'NLKNguyen/pipe-mysql.vim'
+    use 'NLKNguyen/pipe.vim'
+    use 'ntpeters/vim-better-whitespace'
+    use 'NvChad/nvim-colorizer.lua'
     use 'nvim-lua/plenary.nvim'
+    use 'othree/html5.vim'
+    use 'sbdchd/neoformat'
     use 'ThePrimeagen/harpoon'
+    use 'tmhedberg/SimpylFold'
+    use 'tpope/vim-commentary'
+    use 'tpope/vim-repeat'
+    use 'tpope/vim-surround'
+    use 'turbio/bracey.vim'
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
-    use 'mbbill/undotree'
-    use 'tpope/vim-fugitive'
     use 'windwp/nvim-autopairs'
-    use 'tpope/vim-surround'
-    use 'tpope/vim-repeat'
-    use 'tpope/vim-commentary'
-    use 'ntpeters/vim-better-whitespace'
-    use 'farmergreg/vim-lastplace'
-    use 'NvChad/nvim-colorizer.lua'
-    use 'lewis6991/impatient.nvim'
-    use 'sbdchd/neoformat'
-    use 'tmhedberg/SimpylFold'
     use 'windwp/nvim-ts-autotag'
-    use 'mustache/vim-mustache-handlebars'
-
-    use {
-        'goolord/alpha-nvim',
-        config = function()
-            require('vagabond-greeter')()
-        end
-    }
-
-    use 'NLKNguyen/pipe.vim'
-    use 'NLKNguyen/pipe-mysql.vim'
-
-    use 'ggandor/leap.nvim'
-
-    use 'fladson/vim-kitty'
 
 
     -- Rarely used plugins
     use 'airblade/vim-gitgutter'
-    use 'ThePrimeagen/vim-be-good'
-    use 'rhysd/vim-grammarous'
     use 'ianding1/leetcode.vim'
+    use 'rhysd/vim-grammarous'
+    use 'ThePrimeagen/vim-be-good'
+    use 'tpope/vim-fugitive'
     -- use 'norcalli/snippets.nvim'
 
 
@@ -119,13 +115,13 @@ return require('packer').startup(function(use)
 
     -- Favorites
     use 'morhetz/gruvbox'
-    use 'tomasr/molokai'
     use 'nanotech/jellybeans.vim'
+    use 'tomasr/molokai'
 
     -- I think these are cool but I rarely use them
     use 'bluz71/vim-moonfly-colors'
-    use 'rose-pine/neovim'
-    use 'rebelot/kanagawa.nvim'
     use 'NLKNguyen/papercolor-theme'
+    use 'rebelot/kanagawa.nvim'
+    use 'rose-pine/neovim'
 
 end)
