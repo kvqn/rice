@@ -120,8 +120,14 @@ return require('packer').startup(function(use)
 
     -- I think these are cool but I rarely use them
     use 'bluz71/vim-moonfly-colors'
+    use 'jaredgorski/SpaceCamp'
     use 'NLKNguyen/papercolor-theme'
     use 'rebelot/kanagawa.nvim'
     use 'rose-pine/neovim'
+    use 'sjl/badwolf'
+    -- use 'ayu-theme/ayu-vim'
+    -- use 'srcery-colors/srcery-vim'
+    -- use 'w0ng/vim-hybrid'
+
 
 end)
