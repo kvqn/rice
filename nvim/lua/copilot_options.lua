@@ -24,6 +24,7 @@ local copilot_options = {
         },
     },
     filetypes = {
+        toml = false,
         yaml = false,
         markdown = false,
         help = false,
