@@ -4,6 +4,7 @@ require("remaps")
 require("magic")
 require("commands")
 require('colors')
+require('lsp')
 
 -- print("hi from init.lua")
 

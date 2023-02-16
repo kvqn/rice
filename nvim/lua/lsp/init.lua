@@ -5,6 +5,8 @@ lsp.preset("recommended")
 
 lsp.nvim_workspace()
 
+lsp.configure('pylsp', require 'lsp.pylsp')
+
 lsp.setup()
 
 vim.diagnostic.config({
