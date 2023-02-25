@@ -35,3 +35,11 @@ set.foldenable = false
 set.cursorline = true
 set.background = "dark"
 set.encoding = "utf-8"
+
+vim.g['netrw_list_hide'] = table.concat(
+                        {
+                            '__pycache__',
+                            '.git'
+                        },
+                        ','
+)

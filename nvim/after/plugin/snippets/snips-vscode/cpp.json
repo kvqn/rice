@@ -8,5 +8,21 @@
             "// Question : $1",
             "// ============================================================================"
         ]
+    },
+
+    "leetcode template" : {
+        "prefix" : "leetcode",
+        "description" : "Leetcode template",
+        "body" : [
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "",
+            "",
+            "class Solution {",
+            "public:",
+            "    $1",
+            "};",
+            ""
+        ]
     }
 }
