@@ -241,9 +241,10 @@ myManageHook = composeAll $ ( concat [
             "Lxappearance", "Nitrogen", "Arandr", "Pavucontrol", "Xfce4-power-manager-settings",
             "Nm-connection-editor", "spotify", "Spotify", "qBittorrent", "Thunar", "Blueberry.py",
             "marktext", "DesktopEditors", "qbittorrent", "rpi-imager", "Imager",
-            "Steam", "onboard", "Onboard"
+            "Steam", "onboard", "Onboard", "lutris", "Lutris",
+            "org-jdownloader-update-launcher-JDLauncher", "7zFM", "7zfm"
             ]
-        myTFloats = ["Downloads", "Save As...", "Spotify"]
+        myTFloats = ["Downloads", "Save As...", "Spotify", "JDownloader 2"]
         myRFloats = []
         myIgnores = ["desktop_window"]
 
