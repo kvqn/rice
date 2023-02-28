@@ -39,5 +39,17 @@
             "    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}",
             "};"
         ]
+    },
+    
+    "leetcode listnode" : {
+        "prefix" : "leetnode_listnode",
+        "description" : "Leetcode listnode",
+        "body" : [
+            "struct ListNode {",
+            "    int val;",
+            "    ListNode *next;",
+            "    ListNode(int x) : val(x), next(nullptr) {}",
+            "};"
+        ]
     }
 }
