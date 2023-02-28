@@ -11,6 +11,12 @@ vim.g.pipemysql_login_info = {
         mysql_hostname = 'localhost',
         mysql_username = 'kevqn',
         mysql_database = 'bloodbank'
+    },
+    {
+        description = 'video streaming platform',
+        mysql_hostname = 'localhost',
+        mysql_username = 'kevqn',
+        mysql_database = 'video'
     }
 }
 
