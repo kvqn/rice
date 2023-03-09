@@ -37,3 +37,6 @@ export PATH="$PATH:$GEM_HOME/bin"
 export EDITOR="/usr/bin/nvim"
 export VISUAL="/usr/bin/nvim"
 
+# fixes
+export _JAVA_AWT_WM_NONREPARENTING=1    # this fixes misbehaving java apps
+

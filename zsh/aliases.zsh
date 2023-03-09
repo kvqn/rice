@@ -15,6 +15,8 @@
  alias tmux="tmux -u"
  alias gs="git status --short"
 
+ alias yayclean="yay -Sc"
+
 
  # Programs
  alias cgpa="python /home/kevqn/projects/cgpa-analysis/cgpa"

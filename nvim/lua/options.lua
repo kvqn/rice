@@ -43,3 +43,5 @@ vim.g['netrw_list_hide'] = table.concat(
                         },
                         ','
 )
+
+set.foldmethod = "indent"

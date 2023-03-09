@@ -91,6 +91,7 @@ return require('packer').startup(function(use)
     use 'sbdchd/neoformat'
     use 'ThePrimeagen/harpoon'
     use 'tmhedberg/SimpylFold'
+    use 'Konfekt/FastFold'
     use 'tpope/vim-commentary'
     use 'tpope/vim-repeat'
     use 'tpope/vim-surround'

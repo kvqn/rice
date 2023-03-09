@@ -242,7 +242,8 @@ myManageHook = composeAll $ ( concat [
             "Nm-connection-editor", "spotify", "Spotify", "qBittorrent", "Thunar", "Blueberry.py",
             "marktext", "DesktopEditors", "qbittorrent", "rpi-imager", "Imager",
             "Steam", "onboard", "Onboard", "lutris", "Lutris",
-            "org-jdownloader-update-launcher-JDLauncher", "7zFM", "7zfm"
+            "org-jdownloader-update-launcher-JDLauncher", "7zFM", "7zfm", "VirtualBox",
+            "shotwell", "Shotwell"
             ]
         myTFloats = ["Downloads", "Save As...", "Spotify", "JDownloader 2"]
         myRFloats = []
