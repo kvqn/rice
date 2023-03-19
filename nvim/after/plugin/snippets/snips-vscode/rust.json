@@ -1,28 +1,8 @@
 {
-    "practical credits" : {
-        "prefix" : "credits",
-        "description" : "Practical credits",
-        "body" : [
-            "// ============================================================================",
-            "// Submitted by : Guneet Aggarwal (2K21/IT/68)",
-            "// Question : $1",
-            "// ============================================================================"
-        ]
-    },
-
     "leetcode template" : {
         "prefix" : "leetcode",
         "description" : "Leetcode template",
         "body" : [
-            "#include <bits/stdc++.h>",
-            "using namespace std;",
-            "",
-            "",
-            "class Solution {",
-            "public:",
-            "",
-            "};",
-            ""
         ]
     },
 
@@ -40,7 +20,7 @@
             "};"
         ]
     },
-    
+
     "leetcode listnode" : {
         "prefix" : "leetnode_listnode",
         "description" : "Leetcode listnode",

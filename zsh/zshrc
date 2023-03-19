@@ -36,6 +36,7 @@ export GEM_HOME="/home/kevqn/.local/share/gem/ruby/3.0.0"
 export PATH="$PATH:$GEM_HOME/bin"
 export EDITOR="/usr/bin/nvim"
 export VISUAL="/usr/bin/nvim"
+export PATH="$PATH:/home/kevqn/.cargo/bin"
 
 # fixes
 export _JAVA_AWT_WM_NONREPARENTING=1    # this fixes misbehaving java apps

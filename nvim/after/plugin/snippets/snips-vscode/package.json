@@ -9,6 +9,10 @@
             {
                 "language": "cpp",
                 "path": "./cpp.json"
+            },
+            {
+                "language" : "rust",
+                "path": "./rust.json"
             }
         ]
     }
