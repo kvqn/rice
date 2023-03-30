@@ -101,6 +101,8 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
 
+    use 'tweekmonster/django-plus.vim'
+
 
     -- Rarely used plugins
     use 'airblade/vim-gitgutter'
