@@ -13,10 +13,10 @@ require('telescope').setup {
             },
         },
 
-        -- file_ignore_patterns = {
-        --     "^node_modules$",
-        --     "^out$",
-        --     "^__pycache__$"
-        -- },
+        file_ignore_patterns = {
+            "^node_modules$",
+            "^out$",
+            "^__pycache__$"
+        },
     },
 }
