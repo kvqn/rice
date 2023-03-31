@@ -4,18 +4,21 @@
  alias l="ls -lh"
  alias ll="ls -lah"
  alias sudo="sudo --preserve-env"
+ alias less="less -I" # ignore case
 
- alias todo="vim /home/kevqn/projects/todo"
+ alias todo="vim /home/kevqn/projects/todo" # very useful
  alias tree="tree -I __pycache__"
- alias py='python'
+ alias py='python' # im lazy af
 
- alias v="vim"
+ alias v="vim" # im lazy af
 
  alias vim="nvim"
  alias tmux="tmux -u"
- alias gs="git status --short"
 
- alias yayclean="yay -Sc"
+ alias gs="git status --short" # use it a lot
+ alias gl="git log --oneline" # short and sweet
+
+ alias yayclean="yay -Sc" # deletes old packages
 
 
  # Programs
