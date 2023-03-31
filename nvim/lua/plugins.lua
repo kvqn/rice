@@ -105,6 +105,7 @@ return require('packer').startup(function(use)
     use 'mattn/emmet-vim'
 
 
+
     -- Rarely used plugins
     use 'airblade/vim-gitgutter'
     use 'ianding1/leetcode.vim'
@@ -112,6 +113,10 @@ return require('packer').startup(function(use)
     use 'ThePrimeagen/vim-be-good'
     use 'tpope/vim-fugitive'
     -- use 'norcalli/snippets.nvim'
+
+    -- I'm assessing my feelings about these
+    use 'tamago324/nlsp-settings.nvim'
+    use 'rcarriga/nvim-notify'
 
 
     ------------------------------Color Schemes------------------------------
