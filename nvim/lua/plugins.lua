@@ -102,6 +102,7 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-ts-autotag'
 
     use 'tweekmonster/django-plus.vim'
+    use 'mattn/emmet-vim'
 
 
     -- Rarely used plugins
