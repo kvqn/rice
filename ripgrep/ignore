@@ -1,0 +1,10 @@
+
+# who needs to see this shit
+.git
+__pycache__
+node_modules
+*.out
+
+# my settings
+ignore
+
