@@ -15,6 +15,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen theme romkatv/powerlevel10k
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle jeffreytse/zsh-vi-mode
+antigen bundle Tarrasch/zsh-autoenv
 antigen apply
 
 # Aliases
@@ -41,4 +42,10 @@ export PATH="$PATH:/home/kevqn/.cargo/bin"
 # fixes
 export _JAVA_AWT_WM_NONREPARENTING=1    # this fixes misbehaving java apps
 
+# ripgrep conf
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgrep.conf"
+
+# zsh autoenv options
+export AUTOENV_FILE_ENTER=enter.env
+export AUTOENV_FILE_LEAVE=leave.env
+export AUTOENV_HANDLE_LEAVE=1
