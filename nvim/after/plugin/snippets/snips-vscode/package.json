@@ -13,6 +13,14 @@
             {
                 "language" : "rust",
                 "path": "./rust.json"
+            },
+            {
+                "language" : "html",
+                "path": "./html.json"
+            },
+            {
+                "language" : "htmldjango",
+                "path": "./html.json"
             }
         ]
     }

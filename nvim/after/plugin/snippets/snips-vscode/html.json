@@ -1,0 +1,20 @@
+{
+    "django template" : {
+        "prefix" : "extendsbase",
+        "description" : "Django template",
+        "body" : [
+            "{% extends 'base.html' %}",
+            "",
+            "{% load static %}",
+            "",
+            "{% block title %}",
+            "\t$1",
+            "{% endblock %}",
+            "",
+            "{% block content %}",
+            "\t$2",
+            "{% endblock %}",
+            ""
+        ]
+    }
+}
