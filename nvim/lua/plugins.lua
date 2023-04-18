@@ -117,6 +117,8 @@ return require('packer').startup(function(use)
     -- I'm assessing my feelings about these
     use 'tamago324/nlsp-settings.nvim'
     use 'rcarriga/nvim-notify'
+    use 'wellle/context.vim'
+    use 'Houl/repmo-vim'
 
 
     ------------------------------Color Schemes------------------------------
