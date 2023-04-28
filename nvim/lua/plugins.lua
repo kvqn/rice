@@ -34,6 +34,11 @@ return require('packer').startup(function(use)
 
     --------------------------------------------------------------------------
 
+    -- General Usage
+
+    use 'tamago324/nlsp-settings.nvim'
+    use 'wellle/context.vim'
+
     -------These plugins are for NERDtree-------
     use 'preservim/nerdtree'
     use 'ryanoasis/vim-devicons'
@@ -115,10 +120,7 @@ return require('packer').startup(function(use)
     -- use 'norcalli/snippets.nvim'
 
     -- I'm assessing my feelings about these
-    use 'tamago324/nlsp-settings.nvim'
-    use 'rcarriga/nvim-notify'
-    use 'wellle/context.vim'
-    use 'Houl/repmo-vim'
+    use 'dstein64/vim-startuptime'
 
 
     ------------------------------Color Schemes------------------------------
