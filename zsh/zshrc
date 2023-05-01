@@ -49,3 +49,5 @@ export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgrep.conf"
 export AUTOENV_FILE_ENTER=enter.env
 export AUTOENV_FILE_LEAVE=leave.env
 export AUTOENV_HANDLE_LEAVE=1
+
+eval $(thefuck --alias)

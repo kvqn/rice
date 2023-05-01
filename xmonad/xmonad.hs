@@ -254,6 +254,7 @@ myManageHook = composeAll $ ( concat [
             -- Workspace 1 : Terminal
              className =? "Alacritty"           --> doShift "1"
             ,className =? "kitty"               --> doShift "1"
+            ,className =? "Chromium"            --> doShift "1" -- Automation Browser
 
             -- Workspace 2 : File Manager
             , className =? "Thunar"             --> doShift "2"
@@ -275,7 +276,7 @@ myManageHook = composeAll $ ( concat [
             , className =? "spotify"            --> doShift "6"
             , title     =? "Spotify"            --> doShift "6"
 
-            -- Workspace 7 : Notes
+            -- Workspace 7 : Notes and such
             , className =? "obsidian"           --> doShift "7"
             , className =? "mongodb compass"    --> doShift "7"
             , className =? "MongoDB Compass"    --> doShift "7"
