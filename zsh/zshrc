@@ -20,6 +20,7 @@ antigen apply
 
 # Aliases
 source "/home/kevqn/projects/rice/zsh/aliases.zsh"
+source "/home/kevqn/projects/rice/zsh/ssh.zsh"
 
 eval "$(zoxide init zsh)"
 
