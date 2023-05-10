@@ -3,7 +3,6 @@
 alias ls="exa --icons"
 alias l="ls -lh"
 alias ll="ls -lah"
-alias sudo="sudo --preserve-env"
 alias less="less -I" # ignore case
 
 alias todo="vim /home/kevqn/projects/todo" # very useful
@@ -27,3 +26,6 @@ alias vim-plugins-profile="python /home/kevqn/projects/bin/vim-plugins-profile/v
 
 # Fizes
 alias pip="noglob pip"
+
+# Complex Aliases
+sudo() { /usr/bin/sudo -E zsh -ic "$*" }
