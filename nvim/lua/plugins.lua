@@ -122,6 +122,8 @@ return require('packer').startup(function(use)
     -- I'm assessing my feelings about these
     use 'dstein64/vim-startuptime'
 
+    use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+
 
     ------------------------------Color Schemes------------------------------
     -- Set colorscheme in lua/colors/init.lua

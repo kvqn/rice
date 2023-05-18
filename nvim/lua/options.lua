@@ -9,9 +9,9 @@ set.wrap = false
 set.relativenumber = true
 set.number = true
 
-set.tabstop = 4
-set.softtabstop = 4
-set.shiftwidth = 4
+set.tabstop = 2
+set.softtabstop = 2
+set.shiftwidth = 2
 set.expandtab = true
 
 set.smartindent = true
@@ -45,3 +45,4 @@ vim.g['netrw_list_hide'] = table.concat(
 )
 
 set.foldmethod = "indent"
+
