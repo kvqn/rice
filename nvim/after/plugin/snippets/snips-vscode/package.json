@@ -21,6 +21,10 @@
             {
                 "language" : "htmldjango",
                 "path": "./html.json"
+            },
+            {
+                "language" : "typescript",
+                "path": "./typescript.json"
             }
         ]
     }
