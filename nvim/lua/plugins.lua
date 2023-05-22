@@ -109,6 +109,8 @@ return require('packer').startup(function(use)
     use 'tweekmonster/django-plus.vim'
     use 'mattn/emmet-vim'
 
+    -- Pretty good
+    use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
 
 
     -- Rarely used plugins
@@ -121,8 +123,7 @@ return require('packer').startup(function(use)
 
     -- I'm assessing my feelings about these
     use 'dstein64/vim-startuptime'
-
-    use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+    use 'lervag/vimtex'
 
 
     ------------------------------Color Schemes------------------------------
