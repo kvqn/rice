@@ -47,8 +47,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1    # this fixes misbehaving java apps
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/ripgrep.conf"
 
 # zsh autoenv options
-export AUTOENV_FILE_ENTER=enter.env
-export AUTOENV_FILE_LEAVE=leave.env
+export AUTOENV_FILE_ENTER=.enter.zsh
+export AUTOENV_FILE_LEAVE=.leave.zsh
 export AUTOENV_HANDLE_LEAVE=1
 
 eval $(thefuck --alias)
