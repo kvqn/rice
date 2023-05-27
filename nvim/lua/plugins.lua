@@ -133,6 +133,7 @@ return require('packer').startup(function(use)
     use 'morhetz/gruvbox'
     use 'nanotech/jellybeans.vim'
     use 'tomasr/molokai'
+    use 'projekt0n/github-nvim-theme'
 
     -- I think these are cool but I rarely use them
     use 'bluz71/vim-moonfly-colors'
