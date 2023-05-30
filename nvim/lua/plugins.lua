@@ -93,7 +93,7 @@ return require('packer').startup(function(use)
     use 'NvChad/nvim-colorizer.lua'
     use 'nvim-lua/plenary.nvim'
     use 'othree/html5.vim'
-    use 'sbdchd/neoformat'
+    -- use 'sbdchd/neoformat'
     use 'ThePrimeagen/harpoon'
     use 'tmhedberg/SimpylFold'
     use 'Konfekt/FastFold'
@@ -124,6 +124,7 @@ return require('packer').startup(function(use)
     -- I'm assessing my feelings about these
     use 'dstein64/vim-startuptime'
     use 'lervag/vimtex'
+    use 'mhartington/formatter.nvim'
 
 
     ------------------------------Color Schemes------------------------------
