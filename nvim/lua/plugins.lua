@@ -125,6 +125,7 @@ return require('packer').startup(function(use)
     use 'dstein64/vim-startuptime'
     use 'lervag/vimtex'
     use 'mhartington/formatter.nvim'
+    use 'folke/trouble.nvim'
 
 
     ------------------------------Color Schemes------------------------------
