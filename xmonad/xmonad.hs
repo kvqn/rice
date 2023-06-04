@@ -85,11 +85,24 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     , ((controlMask .|. altMask,               xK_Left),  CWS.prevWS)
 
 
-    -- ctrl + alt + shift + left/right                  send (shift) window to left or right workspace
-    , ((controlMask .|. altMask .|. shiftMask, xK_l),  CWS.shiftToNext >> CWS.nextWS)
-    , ((controlMask .|. altMask .|. shiftMask, xK_h),  CWS.shiftToPrev >> CWS.prevWS)
-    , ((controlMask .|. altMask .|. shiftMask, xK_Right),  CWS.shiftToNext >> CWS.nextWS)
-    , ((controlMask .|. altMask .|. shiftMask, xK_Left),  CWS.shiftToPrev >> CWS.prevWS)
+    -- ctrl + alt + shift + left/right                      send (shift) window to left or right workspace
+    , ((controlMask .|. altMask .|. shiftMask, xK_l),       CWS.shiftToNext >> CWS.nextWS)
+    , ((controlMask .|. altMask .|. shiftMask, xK_h),       CWS.shiftToPrev >> CWS.prevWS)
+    , ((controlMask .|. altMask .|. shiftMask, xK_Right),   CWS.shiftToNext >> CWS.nextWS)
+    , ((controlMask .|. altMask .|. shiftMask, xK_Left),    CWS.shiftToPrev >> CWS.prevWS)
+
+    -- ctrl + alt + shift + {1-9}                          send (shift) window to workspace 1-9
+    , ((controlMask .|. altMask .|. shiftMask, xK_1),       windows $ W.shift "1")
+    , ((controlMask .|. altMask .|. shiftMask, xK_2),       windows $ W.shift "2")
+    , ((controlMask .|. altMask .|. shiftMask, xK_3),       windows $ W.shift "3")
+    , ((controlMask .|. altMask .|. shiftMask, xK_4),       windows $ W.shift "4")
+    , ((controlMask .|. altMask .|. shiftMask, xK_5),       windows $ W.shift "5")
+    , ((controlMask .|. altMask .|. shiftMask, xK_6),       windows $ W.shift "6")
+    , ((controlMask .|. altMask .|. shiftMask, xK_7),       windows $ W.shift "7")
+    , ((controlMask .|. altMask .|. shiftMask, xK_8),       windows $ W.shift "8")
+    , ((controlMask .|. altMask .|. shiftMask, xK_9),       windows $ W.shift "9")
+    , ((controlMask .|. altMask .|. shiftMask, xK_0),       windows $ W.shift "10")
+
 
     -- super + {1-9}                                    focus on workspace 1-9
     , ((super,                  xK_1),                  windows $ W.greedyView "1")
@@ -142,7 +155,7 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     , ((super, xK_t), 			                        spawn "kitty --class \"kitty-float\"")
 
     -- super                                            rofi launcher
-    , ((altMask,           		        xK_F1), 	    rofi_launcher)
+    , ((super, xK_space), 	    rofi_launcher)
 
     -- super + shift + s                                rofi screenshot
     , ((super .|. shiftMask,            xK_s),          rofi_screenshot)
@@ -162,10 +175,10 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     , ((0,         xF86XK_AudioPrev), 			        spawn "mpc prev")
     , ((0,         xF86XK_AudioNext), 			        spawn "mpc next")
     , ((0,         xF86XK_AudioStop), 			        spawn "mpc stop")
-    , ((0,         xF86XK_AudioRaiseVolume), 	        spawn "volume --inc")
-    , ((0,         xF86XK_AudioLowerVolume), 	        spawn "volume --dec")
-    , ((0,         xF86XK_AudioMute), 			        spawn "volume --toggle")
-    , ((0,         xF86XK_AudioMicMute), 		        spawn "volume --toggle-mic")
+    , ((0,         xF86XK_AudioRaiseVolume), 	        spawn "pamixer -i 5")
+    , ((0,         xF86XK_AudioLowerVolume), 	        spawn "pamixer -d 5")
+    , ((0,         xF86XK_AudioMute), 			        spawn "pamixer -t")
+    -- , ((0,         xF86XK_AudioMicMute), 		        spawn "pamixer ")
 
     -- Numpad 1 (End) simulates p key
     , ((0,                                  xK_KP_End), 	sendKey 0                                   xK_p)
