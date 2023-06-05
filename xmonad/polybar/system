@@ -24,5 +24,7 @@ sys_adapter = ACAD
 sys_battery = BAT0
 sys_graphics_card = intel_backlight
 sys_network_interface = wlan0
+wired_interface = enp8s0
+wireless_interface = wlp7s0
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

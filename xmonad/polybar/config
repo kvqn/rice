@@ -139,7 +139,7 @@ font-1 = "JetBrainsMono NFP:pixelsize=12;4"
 
 modules-left = spacer workspaces sep2 title
 modules-center = mpd sep2 cpu sep memory sep filesystem
-modules-right = pulseaudio sep battery sep speed sep date spacer
+modules-right = pulseaudio sep battery sep speed-wired speed-wireless date spacer
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

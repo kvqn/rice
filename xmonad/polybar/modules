@@ -94,7 +94,7 @@ mount-0 = /
 interval = 30
 fixed-values = true
 format-mounted = <label-mounted>
-format-mounted-prefix = 
+format-mounted-prefix = 
 format-unmounted = <label-unmounted>
 format-unmounted-prefix = 
 label-mounted = " %free%"
@@ -136,49 +136,27 @@ icon-consume =
 toggle-on-foreground = ${color.primary}
 toggle-off-foreground = ${color.red}
 
-[module/wired-network]
+[module/speed-wired]
 type = internal/network
-interface = ${system.sys_network_interface}
-
-[module/wireless-network]
-type = internal/network
-interface = ${system.sys_network_interface}
-
-[module/network]
-type = internal/network
-interface = ${system.sys_network_interface}
+interface = ${system.wired_interface}
+interface-type = wired
 interval = 1.0
 accumulate-stats = true
-unknown-as-up = true
 format-connected = <label-connected>
-format-connected-prefix = 說
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = ﲁ
-label-connected = "%{A1:~/.xmonad/rofi/bin/network_menu &:} %essid%%{A}"
-label-disconnected = "%{A1:~/.xmonad/rofi/bin/network_menu &:} Offline%{A}"
-ramp-signal-0 =
-ramp-signal-1 =
-ramp-signal-2 =
-ramp-signal-3 =
-ramp-signal-4 =
+label-connected = "󰈀 Ethernet  %downspeed%  %upspeed%   "
+label-disconnected = ""
 
-[module/speed]
+[module/speed-wireless]
 type = internal/network
-interface = ${system.sys_network_interface}
+interface = ${system.wireless_interface}
+interface-type = wireless
 interval = 1.0
 accumulate-stats = true
-unknown-as-up = true
 format-connected = <label-connected>
-format-connected-prefix = 
 format-disconnected = <label-disconnected>
-format-disconnected-prefix = 睊
-label-connected = "%{A1:~/.xmonad/rofi/bin/network_menu &:} %essid%  %downspeed% 祝 %upspeed%%{A}"
-label-disconnected = "%{A1:~/.xmonad/rofi/bin/network_menu &:} Disconnected%{A}"
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+label-connected = "󰖩 %essid%  %downspeed%  %upspeed%   "
+label-disconnected = ""
 
 [module/pulseaudio]
 type = internal/pulseaudio
