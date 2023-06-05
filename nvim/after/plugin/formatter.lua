@@ -5,9 +5,8 @@ formatter.setup {
       typescriptreact = {
         function()
           return {
-            exe = "/usr/bin/prettier",
+            exe = "npx prettier",
             args = {
-              "--config ~/.config/nvim/prettier/typescriptreact.json",
               "--parser typescript",
             },
             stdin = true
