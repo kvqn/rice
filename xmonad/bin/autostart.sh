@@ -22,7 +22,7 @@ xsetroot -cursor_name left_ptr
 xfce4-power-manager &
 
 # Restore wallpaper
-hsetroot -cover ~/.xmonad/wallpaper.png
+hsetroot -cover ~/.xmonad/wallpaper
 
 # Lauch notification daemon
 ~/.xmonad/bin/xmodunst.sh

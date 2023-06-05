@@ -106,7 +106,7 @@ overline-color = ${color.primary}
 ; following horizontal space on the bar:
 ;   width - border-right-size - border-left-size
 border-bottom-size = 1
-border-bottom-color = ${color.primary}
+border-bottom-color = ${color.accent}
 
 ; Number of spaces to add at the beginning/end of the bar
 ; Individual side values can be defined using:
