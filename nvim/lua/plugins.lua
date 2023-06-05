@@ -126,6 +126,7 @@ return require('packer').startup(function(use)
     use 'lervag/vimtex'
     use 'mhartington/formatter.nvim'
     use 'folke/trouble.nvim'
+    use 'tribela/vim-transparent'
 
 
     ------------------------------Color Schemes------------------------------
