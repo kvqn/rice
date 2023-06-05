@@ -5,6 +5,8 @@ function reload-aliases() {
   echo "Reloaded aliases"
 }
 
+alias cd..="cd .." # only thing windows does right
+
 # listing files
 alias ls="exa --icons"
 alias l="ls -lh"
@@ -24,6 +26,8 @@ alias tmux="tmux -u"
 
 alias gs="git status --short" # use it a lot
 alias gl="git log --oneline -25" # short and sweet
+alias gd="git diff --stat"
+alias gds="git diff --stat --staged"
 
 alias yayclean="yay -Sc" # deletes old packages
 
