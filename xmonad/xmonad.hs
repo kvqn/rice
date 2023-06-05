@@ -37,8 +37,8 @@ myStartupHook = do
 myTerminal		= "kitty"
 
 -- Rofi Menus
-rofi_launcher 		= spawn "~/.xmonad/rofi/bin/launcher"
-rofi_screenshot 	= spawn "~/.xmonad/rofi/bin/screenshot"
+-- rofi_launcher 		= spawn "~/.xmonad/rofi/bin/launcher"
+-- rofi_screenshot 	= spawn "~/.xmonad/rofi/bin/screenshot"
 
 -- ## Settings ## -------------------------------------------------------------------
 
@@ -154,11 +154,12 @@ myKeys conf@(XConfig {XMonad.modMask = super}) = M.fromList $ [
     -- super + t                                        launch alacritty in floating mode
     , ((super, xK_t), 			                        spawn "kitty --class \"kitty-float\"")
 
-    -- super                                            rofi launcher
-    , ((super, xK_space), 	    rofi_launcher)
+    -- super                                            dmenu
+    -- 
+    , ((super, xK_space), 	                            spawn "j4-dmenu-desktop --dmenu=\"dmenu -i -fn 'JetBrainsMono NF Light-15'\"")
 
     -- super + shift + s                                rofi screenshot
-    , ((super .|. shiftMask,            xK_s),          rofi_screenshot)
+    , ((super .|. shiftMask,            xK_s),          spawn "flameshot gui")
 
     -- super + shift + c                                color picker (xcolor)
     , ((super .|. shiftMask,            xK_c),          spawn "xcolor -s")
