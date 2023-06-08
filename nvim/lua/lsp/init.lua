@@ -17,3 +17,11 @@ vim.diagnostic.config({
   severity_sort = false,
   float = true,
 })
+
+local cmp = require('cmp')
+
+cmp.setup({
+  mapping = {
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+  }
+})

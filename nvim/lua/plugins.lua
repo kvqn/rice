@@ -34,22 +34,14 @@ return require('packer').startup(function(use)
 
     --------------------------------------------------------------------------
 
-    -- General Usage
+    ---------------- Why is this not in the base install? ----------------
 
     use 'tamago324/nlsp-settings.nvim'
     use 'wellle/context.vim'
 
-    -------These plugins are for NERDtree-------
-    use 'preservim/nerdtree'
-    use 'ryanoasis/vim-devicons'
-    use 'Xuyuanp/nerdtree-git-plugin'
-    -- use 'scrooloose/nerdtree-project-plugin'
-    --------------------------------------------
-
-    use {
-        'goolord/alpha-nvim',
-        config = function() require('vagabond-greeter')() end
-    }
+    use 'tpope/vim-commentary'
+    use 'tpope/vim-repeat'
+    use 'tpope/vim-surround'
 
     use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
 
@@ -57,8 +49,43 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use 'sharkdp/fd'
 
+    use {
+        "danymat/neogen",
+        config = function() require('neogen').setup {} end,
+        requires = "nvim-treesitter/nvim-treesitter",
+    }
+
+    use 'farmergreg/vim-lastplace'
+
+    use 'vim-airline/vim-airline'
+    use 'vim-airline/vim-airline-themes'
+
+    use 'windwp/nvim-autopairs'
+    use 'ntpeters/vim-better-whitespace'
+
+    use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+    use 'nvim-lua/plenary.nvim'
+
+    ----------------------------------------------------------------------
+
+    ---------------------------- Much Love <3 ----------------------------
+
+    -- Code Formatting Sweetness
+    use 'mhartington/formatter.nvim'
+
+    -- Transparent background is to die for
+    use 'tribela/vim-transparent'
+
+    -- Live Markdown Preview
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = "cd app && npm install",
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+        ft = { "markdown" },
+    })
+
+    -- Saves me keystrokes
     use {
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
@@ -68,86 +95,83 @@ return require('packer').startup(function(use)
         end,
     }
 
+    -- Leap around
+    use 'ggandor/leap.nvim'
+
+    -- Live HTML Preview
+    use 'turbio/bracey.vim'
+
+    -- Bookmarks
+    use 'ThePrimeagen/harpoon'
+
+    ----------------------------------------------------------------------
+
+    -------------------------- Useful Sometimes --------------------------
+
+    use 'folke/trouble.nvim' -- Display my errors
+
     use {
-        "danymat/neogen",
-        config = function() require('neogen').setup {} end,
-        requires = "nvim-treesitter/nvim-treesitter",
+        'goolord/alpha-nvim',
+        config = function() require('vagabond-greeter')() end
     }
 
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = "cd app && npm install",
-        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-        ft = { "markdown" },
-    })
-
-    use 'farmergreg/vim-lastplace'
-    use 'fladson/vim-kitty'
-    use 'ggandor/leap.nvim'
-    use 'lewis6991/impatient.nvim'
+    use 'ianding1/leetcode.vim'
+    use 'dstein64/vim-startuptime'
     use 'mbbill/undotree'
-    use 'mustache/vim-mustache-handlebars'
+    use 'airblade/vim-gitgutter'
+
+    -- Rarely used
+    use 'tpope/vim-fugitive'
+
+    -------These plugins are for NERDtree-------
+    use 'preservim/nerdtree'
+    use 'ryanoasis/vim-devicons'
+    use 'Xuyuanp/nerdtree-git-plugin'
+    --------------------------------------------
+
+    ----------------------------------------------------------------------
+
+    ------------------------- Specific Use Cases -------------------------
+
+    -- kitty.conf
+    use 'fladson/vim-kitty'
+
+    -- SQL
     use 'NLKNguyen/pipe-mysql.vim'
     use 'NLKNguyen/pipe.vim'
-    use 'ntpeters/vim-better-whitespace'
-    use 'NvChad/nvim-colorizer.lua'
-    use 'nvim-lua/plenary.nvim'
+
+    -- HTMl
     use 'othree/html5.vim'
-    -- use 'sbdchd/neoformat'
-    use 'ThePrimeagen/harpoon'
-    use 'tmhedberg/SimpylFold'
-    use 'Konfekt/FastFold'
-    use 'tpope/vim-commentary'
-    use 'tpope/vim-repeat'
-    use 'tpope/vim-surround'
-    use 'turbio/bracey.vim'
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
-    use 'windwp/nvim-autopairs'
+    use 'mattn/emmet-vim'
+    use 'mustache/vim-mustache-handlebars'
     use 'windwp/nvim-ts-autotag'
 
+    -- Python
     use 'tweekmonster/django-plus.vim'
-    use 'mattn/emmet-vim'
 
-    -- Pretty good
-    use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
-
-
-    -- Rarely used plugins
-    use 'airblade/vim-gitgutter'
-    use 'ianding1/leetcode.vim'
-    use 'rhysd/vim-grammarous'
-    use 'ThePrimeagen/vim-be-good'
-    use 'tpope/vim-fugitive'
-    -- use 'norcalli/snippets.nvim'
-
-    -- I'm assessing my feelings about these
-    use 'dstein64/vim-startuptime'
+    -- LaTeX
     use 'lervag/vimtex'
-    use 'mhartington/formatter.nvim'
-    use 'folke/trouble.nvim'
-    use 'tribela/vim-transparent'
 
-
-    ------------------------------Color Schemes------------------------------
+    ------------------------------Color Schemes----------------------------
     -- Set colorscheme in lua/colors/init.lua
 
     -- Favorites
+    use 'projekt0n/github-nvim-theme'
     use 'morhetz/gruvbox'
     use 'nanotech/jellybeans.vim'
     use 'tomasr/molokai'
-    use 'projekt0n/github-nvim-theme'
 
     -- I think these are cool but I rarely use them
     use 'bluz71/vim-moonfly-colors'
     use 'jaredgorski/SpaceCamp'
     use 'NLKNguyen/papercolor-theme'
     use 'rebelot/kanagawa.nvim'
-    use 'rose-pine/neovim'
     use 'sjl/badwolf'
+    -- use 'rose-pine/neovim'
     -- use 'ayu-theme/ayu-vim'
     -- use 'srcery-colors/srcery-vim'
     -- use 'w0ng/vim-hybrid'
+    -----------------------------------------------------------------------
 
 
 end)
