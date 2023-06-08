@@ -46,5 +46,17 @@ formatter.setup({
 				}
 			end,
 		},
+    cpp = {
+      function()
+        return {
+          exe = "clang-format",
+          args = {
+            -- "-assume-filename=foo.cpp",
+            "-style=file",
+          },
+          stdin = true,
+        }
+      end,
+    }
 	},
 })
