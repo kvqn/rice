@@ -109,6 +109,7 @@ return require('packer').startup(function(use)
     -------------------------- Useful Sometimes --------------------------
 
     use 'folke/trouble.nvim' -- Display my errors
+    use 'nvim-tree/nvim-web-devicons' -- needed by trouble.nvim
 
     use {
         'goolord/alpha-nvim',
