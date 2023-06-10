@@ -1,6 +1,6 @@
 -- Vim optionsa
 
-local set=vim.opt
+local set = vim.opt
 
 vim.syntax = "on"
 set.errorbells = false
@@ -22,7 +22,7 @@ set.incsearch = true
 
 set.scrolloff = 8
 
-set.cc = {120}
+set.cc = { 120 }
 -- set.signcolumn = true
 
 set.hidden = true
@@ -36,13 +36,10 @@ set.cursorline = true
 set.background = "dark"
 set.encoding = "utf-8"
 
-vim.g['netrw_list_hide'] = table.concat(
-                        {
-                            '__pycache__',
-                            '.git'
-                        },
-                        ','
-)
+vim.g["netrw_list_hide"] = table.concat({
+	"__pycache__",
+	".git",
+}, ",")
 
 set.foldmethod = "indent"
-
+set.termguicolors = true

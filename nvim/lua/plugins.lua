@@ -129,6 +129,9 @@ return require('packer').startup(function(use)
     use 'Xuyuanp/nerdtree-git-plugin'
     --------------------------------------------
 
+    -- new
+    use 'norcalli/nvim-colorizer.lua'
+
     ----------------------------------------------------------------------
 
     ------------------------- Specific Use Cases -------------------------
