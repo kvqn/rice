@@ -143,7 +143,8 @@ interval = 1.0
 accumulate-stats = true
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-connected = "󰈀 Ethernet  %downspeed%  %upspeed%   "
+# label-connected = "󰈀 Ethernet  %downspeed%  %upspeed%   "
+label-connected = "󰈀 Ethernet   "
 label-disconnected = ""
 
 [module/speed-wireless]
@@ -154,7 +155,8 @@ interval = 1.0
 accumulate-stats = true
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-label-connected = "󰖩 %essid%  %downspeed%  %upspeed%   "
+# label-connected = "󰖩 %essid%  %downspeed%  %upspeed%   "
+label-connected = "󰖩 %essid%   "
 label-disconnected = ""
 
 [module/pulseaudio]
