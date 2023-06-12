@@ -53,7 +53,7 @@
     ]
   },
 
-  ,"CodeChef Template": {
+  "CodeChef Template": {
     "prefix": "codechef",
     "body": [
       "#include <bits/stdc++.h>",

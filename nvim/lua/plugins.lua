@@ -131,7 +131,8 @@ return require('packer').startup(function(use)
     --------------------------------------------
 
     -- new
-    use 'norcalli/nvim-colorizer.lua'
+    use 'MunifTanjim/nui.nvim'
+    use 'xeluxee/competitest.nvim'
 
     ----------------------------------------------------------------------
 
@@ -149,6 +150,9 @@ return require('packer').startup(function(use)
     use 'mattn/emmet-vim'
     use 'mustache/vim-mustache-handlebars'
     use 'windwp/nvim-ts-autotag'
+
+    -- CSS
+    use 'norcalli/nvim-colorizer.lua'
 
     -- Python
     use 'tweekmonster/django-plus.vim'

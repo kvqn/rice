@@ -11,4 +11,7 @@ vim.keymap.set("n", "<M-3>", function() ui.nav_file(3) end)
 vim.keymap.set("n", "<M-4>", function() ui.nav_file(4) end)
 vim.keymap.set("n", "<M-5>", function() ui.nav_file(5) end)
 
+require("harpoon").setup {
+    tabline = true,
+}
 
