@@ -16,7 +16,7 @@ alias la="ls -a"
 alias less="less -I" # ignore case
 
 alias todo="vim /home/kevqn/projects/todo" # very useful
-alias tree="tree -I __pycache__"
+alias tree="tree -I __pycache__ -I node_modules"
 alias py='python' # im lazy af
 
 alias v="vim" # im lazy af
@@ -66,3 +66,5 @@ alias java20="/usr/lib/jvm/java-20-openjdk/bin/java"
 
 # webd shit
 export react="127.0.0.1:3000"
+
+alias mirrorlist-generate="sudo reflector --download-timeout 10 --country India --sort score --age 48 --verbose --save /etc/pacman.d/mirrorlist"

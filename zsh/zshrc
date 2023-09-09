@@ -38,6 +38,17 @@ export VISUAL="/usr/bin/nvim"
 export PATH="$PATH:/home/kevqn/.cargo/bin"
 export PATH="$PATH:/home/kevqn/bin"
 
+export PATH="$PATH:/home/kevqn/Apps/flutter/flutter/bin"
+export CHROME_EXECUTABLE="chromium"
+export ANDROID_HOME="/home/kevqn/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/build-tools/34.0.0"
+
+
+source /etc/profile
+
 # fixes
 export _JAVA_AWT_WM_NONREPARENTING=1    # this fixes misbehaving java apps
 
@@ -50,3 +61,4 @@ export AUTOENV_FILE_LEAVE=.leave.zsh
 export AUTOENV_HANDLE_LEAVE=1
 
 eval $(thefuck --alias)
+
