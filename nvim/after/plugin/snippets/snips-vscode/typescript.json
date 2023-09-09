@@ -54,5 +54,19 @@
       ""
     ],
     "description": "nextjsapi"
+  },
+  "nextjs page": {
+    "prefix": "page",
+    "description": "nextjs page",
+    "body": [
+      "type Props = {}",
+      "export default function Page({}: Props) {",
+      "  return (",
+      "    <div>",
+      "      <h1>Page</h1>",
+      "    </div>",
+      "  )",
+      "}"
+    ]
   }
 }

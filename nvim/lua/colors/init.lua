@@ -3,3 +3,4 @@ require('github-theme').setup({})
 
 -- print("hello from colors")
 vim.cmd.colorscheme('github_dark_tritanopia')
+

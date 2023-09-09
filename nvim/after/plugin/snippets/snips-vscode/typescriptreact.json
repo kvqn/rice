@@ -1,0 +1,17 @@
+{
+  "nextjs page": {
+    "prefix": "page",
+    "description": "nextjs page",
+    "body": [
+      "type Props = {}",
+      "",
+      "export default function Page(props: Props) {",
+      "  return (",
+      "    <div>",
+      "      <h1>Page</h1>",
+      "    </div>",
+      "  )",
+      "}"
+    ]
+  }
+}

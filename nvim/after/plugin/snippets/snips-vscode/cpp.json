@@ -80,5 +80,16 @@
             ""
     ],
     "description": "CodeChef Template"
+  },
+
+  "bits stdc++": {
+    "prefix": "bits",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      ""
+    ],
+    "description": "bits/stdc++.h"
   }
 }

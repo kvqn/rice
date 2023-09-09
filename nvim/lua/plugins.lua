@@ -50,11 +50,13 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use {
-        "danymat/neogen",
-        config = function() require('neogen').setup {} end,
-        requires = "nvim-treesitter/nvim-treesitter",
-    }
+    -- use {
+    --     "danymat/neogen",
+    --     config = function() require('neogen').setup {} end,
+    --     requires = "nvim-treesitter/nvim-treesitter",
+    -- }
+
+    use 'kkoomen/vim-doge'
 
     use 'farmergreg/vim-lastplace'
 
@@ -111,10 +113,10 @@ return require('packer').startup(function(use)
     use 'folke/trouble.nvim' -- Display my errors
     use 'nvim-tree/nvim-web-devicons' -- needed by trouble.nvim
 
-    use {
-        'goolord/alpha-nvim',
-        config = function() require('vagabond-greeter')() end
-    }
+    -- use {
+    --     'goolord/alpha-nvim',
+    --     config = function() require('vagabond-greeter')() end
+    -- }
 
     use 'ianding1/leetcode.vim'
     use 'dstein64/vim-startuptime'

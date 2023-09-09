@@ -43,3 +43,7 @@ vim.g["netrw_list_hide"] = table.concat({
 
 set.foldmethod = "indent"
 set.termguicolors = true
+
+------- Plugin options --------
+
+vim.g.context_enabled = 0

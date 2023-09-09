@@ -1,4 +1,4 @@
-return function ()
+function vagabond_greeter ()
 
     local alpha = require('alpha')
     local math = require('math')
@@ -22,4 +22,7 @@ return function ()
 
     alpha.setup(config)
 
+end
+
+return function ()
 end

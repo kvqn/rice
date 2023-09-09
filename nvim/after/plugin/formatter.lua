@@ -24,12 +24,47 @@ formatter.setup({
 				}
 			end,
 		},
-		markdown = {
+		svg = {
 			function()
 				return {
 					exe = "npx prettier",
 					args = {
-						"--parser markdown",
+						"--parser html",
+					},
+					stdin = true,
+				}
+			end,
+		},
+		javascript = {
+			function()
+				return {
+					exe = "npx prettier",
+					args = {
+						"--parser typescript",
+					},
+					stdin = true,
+				}
+			end,
+		},
+
+		javascriptreact = {
+			function()
+				return {
+					exe = "npx prettier",
+					args = {
+						"--parser typescript",
+					},
+					stdin = true,
+				}
+			end,
+		},
+		markdown = {
+			function()
+				return {
+					exe = "mdformat",
+					args = {
+            "--wrap 119",
+						"-",
 					},
 					stdin = true,
 				}
@@ -57,6 +92,28 @@ formatter.setup({
           stdin = true,
         }
       end,
-    }
+    },
+    python = {
+      function()
+        return {
+          exe = "black",
+          args = {
+            "-",
+          },
+          stdin = true,
+        }
+      end,
+    },
+		css = {
+			function()
+				return {
+					exe = "npx prettier",
+					args = {
+						"--parser css",
+					},
+					stdin = true,
+				}
+			end,
+		},
 	},
 })
