@@ -1,11 +1,10 @@
-
-export STARSHIP_CONFIG=~/projects/rice/zsh/starship.toml
+export STARSHIP_CONFIG=$ZDOTDIR/starship.toml
 eval "$(starship init zsh)"
 
 # Plugins and Themes
 # Plugin Manager : Antigen
 
-source /home/kevqn/projects/rice/zsh/antigen.zsh
+source $ZDOTDIR/antigen.zsh
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -15,9 +14,9 @@ antigen bundle "MichaelAquilina/zsh-autoswitch-virtualenv"
 antigen apply
 
 # Aliases
-source "/home/kevqn/projects/rice/zsh/aliases.zsh"
-source "/home/kevqn/projects/rice/zsh/ssh.zsh"
-source "/home/kevqn/projects/rice/zsh/hidden.zsh"
+source "$ZDOTDIR/aliases.zsh"
+source "$ZDOTDIR/ssh.zsh"
+source "$ZDOTDIR/hidden.zsh"
 
 eval "$(zoxide init zsh)"
 
@@ -31,16 +30,16 @@ export BROWSER=vivaldi-stable
 export PATH="/usr/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/.local/bin/scripts-bin"
-export GEM_HOME="/home/kevqn/.local/share/gem/ruby/3.0.0"
+export GEM_HOME="$HOME/.local/share/gem/ruby/3.0.0"
 export PATH="$PATH:$GEM_HOME/bin"
 export EDITOR="/usr/bin/nvim"
 export VISUAL="/usr/bin/nvim"
-export PATH="$PATH:/home/kevqn/.cargo/bin"
-export PATH="$PATH:/home/kevqn/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/bin"
 
-export PATH="$PATH:/home/kevqn/Apps/flutter/flutter/bin"
+export PATH="$PATH:$HOME/Apps/flutter/flutter/bin"
 export CHROME_EXECUTABLE="chromium"
-export ANDROID_HOME="/home/kevqn/Android/Sdk"
+export ANDROID_HOME="$HOME/Android/Sdk"
 export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
 export PATH="$PATH:$ANDROID_HOME/platform-tools"
 export PATH="$PATH:$ANDROID_HOME/emulator"
