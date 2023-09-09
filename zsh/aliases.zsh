@@ -15,7 +15,7 @@ alias la="ls -a"
 
 alias less="less -I" # ignore case
 
-alias todo="vim /home/kevqn/projects/todo" # very useful
+alias todo="vim $HOME/projects/todo" # very useful
 alias tree="tree -I __pycache__ -I node_modules"
 alias py='python' # im lazy af
 
@@ -50,8 +50,8 @@ alias vxmonad="cd ~/projects/rice/xmonad; v xmonad.hs"
 
 
 # Programs
-alias cgpa="python /home/kevqn/projects/cgpa-analysis/cgpa"
-alias vim-plugins-profile="python /home/kevqn/projects/bin/vim-plugins-profile/vim-plugins-profile.py /usr/bin/nvim"
+alias cgpa="python $HOME/projects/cgpa-analysis/cgpa"
+alias vim-plugins-profile="python $HOME/projects/bin/vim-plugins-profile/vim-plugins-profile.py /usr/bin/nvim"
 
 # Fizes
 alias pip="noglob pip"
@@ -68,3 +68,6 @@ alias java20="/usr/lib/jvm/java-20-openjdk/bin/java"
 export react="127.0.0.1:3000"
 
 alias mirrorlist-generate="sudo reflector --download-timeout 10 --country India --sort score --age 48 --verbose --save /etc/pacman.d/mirrorlist"
+
+# ripgrep
+alias rg="\rg --smart-case --unrestricted --hidden --ignore-file=.rgignore --ignore-file=$HOME/.config/ripgrep/ignore --sortr=path"
