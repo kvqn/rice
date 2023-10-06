@@ -70,4 +70,4 @@ export react="127.0.0.1:3000"
 alias mirrorlist-generate="sudo reflector --download-timeout 10 --country India --sort score --age 48 --verbose --save /etc/pacman.d/mirrorlist"
 
 # ripgrep
-alias rg="\rg --smart-case --unrestricted --hidden --ignore-file=.rgignore --ignore-file=$HOME/.config/ripgrep/ignore --sortr=path"
+alias rg="\rg --smart-case --unrestricted --hidden --ignore-file=.rgignore --ignore-file=$HOME/.config/ripgrep/ignore --sortr=path --no-ignore-vcs"
