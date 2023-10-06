@@ -1,7 +1,7 @@
 # Exports and PATH variable
 
-export PATH="/usr/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:/usr/bin"
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/bin/scripts-bin"
 export GEM_HOME="$HOME/.local/share/gem/ruby/3.0.0"
 export PATH="$PATH:$GEM_HOME/bin"
