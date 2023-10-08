@@ -5,7 +5,11 @@ lsp.preset("recommended")
 
 lsp.nvim_workspace()
 
-lsp.configure('pylsp', require 'lsp.pylsp')
+-- Commenting this line because it gives me pain.
+-- I don't use pylsp anymore but I still want to keep my configuration if I ever wind up using it again.
+-- Keeping this line uncommented gives me a warning every time I open a python file.
+-- I don't know how to fix that while still keeping the configuration.
+-- lsp.configure('pylsp', require 'lsp.pylsp')
 
 lsp.setup()
 
