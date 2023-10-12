@@ -1,10 +1,6 @@
 
 local lsp = require("lsp-zero")
 
--- lsp.preset("recommended")
-
--- lsp.nvim_workspace()
-
 -- Commenting this line because it gives me pain.
 -- I don't use pylsp anymore but I still want to keep my configuration if I ever wind up using it again.
 -- Keeping this line uncommented gives me a warning every time I open a python file.
@@ -41,5 +37,7 @@ local cmp = require('cmp')
 cmp.setup({
   mapping = {
     ['<CR>'] = cmp.mapping.confirm({select = false}),
+    ['<C-j>'] = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Insert}),
+    ['<C-k>'] = cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior.Insert}),
   }
 })
