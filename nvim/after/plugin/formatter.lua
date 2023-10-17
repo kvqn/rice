@@ -16,7 +16,7 @@ formatter.setup({
 		typescript = {
 			function()
 				return {
-					exe = "npx prettier",
+					exe = "bun x prettier",
 					args = {
 						"--parser typescript",
 					},
