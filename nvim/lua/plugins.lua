@@ -165,6 +165,9 @@ return require('packer').startup(function(use)
     ------------------------------Color Schemes----------------------------
     -- Set colorscheme in lua/colors/init.lua
 
+    -- Colorscheme switcher
+    use 'zaldih/themery.nvim'
+
     -- Favorites
     use 'projekt0n/github-nvim-theme'
     use 'morhetz/gruvbox'
