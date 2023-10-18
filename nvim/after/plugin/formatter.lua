@@ -63,7 +63,7 @@ formatter.setup({
 				return {
 					exe = "mdformat",
 					args = {
-            "--wrap 119",
+            "--wrap 79",
 						"-",
 					},
 					stdin = true,
