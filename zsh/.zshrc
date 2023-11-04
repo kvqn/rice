@@ -1,3 +1,6 @@
+
+export SHELL="$(which zsh)"
+
 # Exports and PATH variable
 
 export PATH="$PATH:/usr/bin"

@@ -71,3 +71,6 @@ alias mirrorlist-generate="sudo reflector --download-timeout 10 --country India 
 
 # ripgrep
 alias rg="\rg --smart-case --unrestricted --hidden --ignore-file=.rgignore --ignore-file=$HOME/.config/ripgrep/ignore --sortr=path --no-ignore-vcs"
+
+# aur helper
+alias aur="pikaur"
