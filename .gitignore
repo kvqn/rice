@@ -1,0 +1,10 @@
+xmonad/xmonad.errors
+xmonad/xmonad-x86_64-linux
+xmonad/build-x86_64-linux
+
+kitty/kitty-themes
+kitty/kitty.conf.bak
+
+zsh/ssh.zsh
+zsh/.zshrc.zwc
+zsh/hidden.zsh
