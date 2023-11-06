@@ -57,7 +57,7 @@ alias vim-plugins-profile="python $HOME/projects/bin/vim-plugins-profile/vim-plu
 alias pip="noglob pip"
 
 # Complex Aliases
-sudo() { /usr/bin/sudo -E zsh -ic "$*" }
+# sudo() { /usr/bin/sudo -E zsh -ic "$*" }
 
 # java is stupid
 alias java8="/usr/lib/jvm/java-8-openjdk/bin/java"
