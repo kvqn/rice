@@ -10,9 +10,14 @@ $git_status\
 $python\
 $fill\
 $cmd_duration\
+$time\
 $status\
 $line_break\
 $character"""
+
+[time]
+disabled=false
+style='bold bright-blue'
 
 [git_status]
 ahead =	'⇡${count} '
@@ -29,6 +34,7 @@ style = 'bold green'
 
 [cmd_duration]
 min_time = 0
+style='bold bright-green'
 
 [status]
 disabled=false
@@ -37,3 +43,4 @@ format=	'returned [$symbol$status]($style) '
 
 [directory]
 read_only = ' 🔒'
+style='bold bright-cyan'
