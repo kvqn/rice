@@ -46,7 +46,7 @@ return require('packer').startup(function(use)
     use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
@@ -180,7 +180,7 @@ return require('packer').startup(function(use)
     use 'NLKNguyen/papercolor-theme'
     use 'rebelot/kanagawa.nvim'
     use 'sjl/badwolf'
-    -- use 'rose-pine/neovim'
+    use 'rose-pine/neovim'
     -- use 'ayu-theme/ayu-vim'
     -- use 'srcery-colors/srcery-vim'
     -- use 'w0ng/vim-hybrid'
