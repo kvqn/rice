@@ -184,6 +184,8 @@ return require('packer').startup(function(use)
     -- use 'ayu-theme/ayu-vim'
     -- use 'srcery-colors/srcery-vim'
     -- use 'w0ng/vim-hybrid'
+    --
+    use 'loctvl842/monokai-pro.nvim'
     -----------------------------------------------------------------------
 
 

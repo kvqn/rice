@@ -3,5 +3,5 @@ require('github-theme').setup({})
 
 -- print("hello from colors")
 -- vim.cmd.colorscheme('github_dark_tritanopia')
-vim.cmd.colorscheme('rose-pine')
+vim.cmd.colorscheme('monokai-pro')
 
