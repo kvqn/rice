@@ -74,3 +74,7 @@ alias rg="\rg --smart-case --unrestricted --hidden --ignore-file=.rgignore --ign
 
 # aur helper
 alias aur="pikaur"
+
+github() {
+  xdg-open $(git remote show origin | grep 'Fetch URL:' | grep -o 'http.*') > /dev/null
+}
